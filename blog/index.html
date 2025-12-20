@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - Al-Huda Медресе | Статьи о изучении Корана и таджвиде</title>
+    <meta name="description" content="Полезные статьи и новости медресе Al-Huda. Советы по изучению Корана, правила таджвида, арабский язык для начинающих.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .blog-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.95) 0%, rgba(139, 69, 19, 0.85) 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        .article-card {
+            transition: all 0.3s ease;
+        }
+        .article-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .category-badge {
+            transition: all 0.3s ease;
+        }
+        .category-badge:hover {
+            transform: scale(1.05);
+        }
+        .read-time {
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Page Header -->
+    <section class="relative py-20 blog-gradient">
+        <div class="absolute inset-0">
+            <img src="/assets/images/breadcrumb.jpg" 
+                 alt="Исламские книги и знания" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                    Блог и новости
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Полезные статьи, советы и новости о изучении Корана, таджвида и арабского языка
+                </p>
+                
+                <!-- Breadcrumb -->
+                <div class="flex justify-center items-center space-x-2 text-sm">
+                    <a href="/" class="hover:text-secondary">Главная</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-secondary">Блог</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left Column: Articles List -->
+                <div class="lg:col-span-2">
+                    <!-- Featured Article -->
+                    <div class="mb-12 bg-white rounded-2xl overflow-hidden shadow-lg article-card">
+                        <div class="relative h-64 md:h-80">
+                            <img src="/assets/images/breadcrumb.jpg" 
+                                 alt="Изучение таджвида" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-bold category-badge">
+                                    Таджвид
+                                </span>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                                <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-2">
+                                    Основные правила таджвида для начинающих
+                                </h2>
+                                <p class="text-gray-200">
+                                    Пошаговое руководство по правильному чтению Корана
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap items-center justify-between mb-4 text-sm text-gray-500">
+                                <div class="flex items-center space-x-4">
+                                    <span class="flex items-center">
+                                        <i class="far fa-calendar mr-2"></i>
+                                        15 декабря 2024
+                                    </span>
+                                    <span class="flex items-center">
+                                        <i class="far fa-clock mr-2"></i>
+                                        8 мин чтения
+                                    </span>
+                                </div>
+                                <span class="flex items-center">
+                                    <i class="far fa-eye mr-2"></i>
+                                    1,245 просмотров
+                                </span>
+                            </div>
+                            <p class="text-gray-700 mb-4">
+                                Таджвид — это наука о правильном чтении Корана. В этой статье мы разберем основные правила, 
+                                которые необходимо знать каждому, кто начинает изучать Коран. Вы узнаете о махраджах букв, 
+                                правилах удлинения и других важных аспектах...
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <a href="/blog/osnovnye-pravila-tadzhvida" 
+                                   class="text-primary font-medium hover:text-accent transition flex items-center">
+                                    Читать статью
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-2">
+                                        <i class="fas fa-user text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">Дени</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Articles Grid -->
+                    <div class="mb-8">
+                        <h2 class="font-heading font-bold text-2xl text-primary mb-6">
+                            Последние статьи
+                        </h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Article 1 -->
+                            <article class="bg-white rounded-2xl overflow-hidden shadow article-card hover-scale">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="/assets/images/breadcrumb.jpg" 
+                                         alt="Арабский алфавит" 
+                                         class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-3">
+                                        <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-bold category-badge">
+                                            Арабский язык
+                                        </span>
+                                        <span class="text-xs text-gray-500 read-time">5 мин</span>
+                                    </div>
+                                    <h3 class="font-heading font-bold text-lg mb-3">
+                                        Как быстро выучить арабский алфавит: 5 эффективных методов
+                                    </h3>
+                                    <p class="text-gray-600 text-sm mb-4">
+                                        Практические советы по запоминанию арабских букв и их форм в начале, середине и конце слов.
+                                    </p>
+                                    <div class="flex justify-between items-center text-sm">
+                                        <span class="text-gray-500">12 дек 2024</span>
+                                        <a href="/blog/arabskij-alfavit" class="text-primary hover:text-accent font-medium">
+                                            Читать →
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Article 2 -->
+                            <article class="bg-white rounded-2xl overflow-hidden shadow article-card hover-scale">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="/assets/images/breadcrumb.jpg" 
+                                         alt="Дети изучают Коран" 
+                                         class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-3">
+                                        <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-bold category-badge">
+                                            Для родителей
+                                        </span>
+                                        <span class="text-xs text-gray-500 read-time">7 мин</span>
+                                    </div>
+                                    <h3 class="font-heading font-bold text-lg mb-3">
+                                        Как заинтересовать ребенка изучением Корана: советы родителям
+                                    </h3>
+                                    <p class="text-gray-600 text-sm mb-4">
+                                        Игровые методики и подходы к обучению детей чтению Корана. Опыт наших преподавателей.
+                                    </p>
+                                    <div class="flex justify-between items-center text-sm">
+                                        <span class="text-gray-500">8 дек 2024</span>
+                                        <a href="/blog/deti-koran" class="text-primary hover:text-accent font-medium">
+                                            Читать →
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Article 3 -->
+                            <article class="bg-white rounded-2xl overflow-hidden shadow article-card hover-scale">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="/assets/images/breadcrumb.jpg" 
+                                         alt="Онлайн обучение" 
+                                         class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-3">
+                                        <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-bold category-badge">
+                                            Советы
+                                        </span>
+                                        <span class="text-xs text-gray-500 read-time">6 мин</span>
+                                    </div>
+                                    <h3 class="font-heading font-bold text-lg mb-3">
+                                        Онлайн vs очное обучение: что выбрать для изучения Корана?
+                                    </h3>
+                                    <p class="text-gray-600 text-sm mb-4">
+                                        Сравнение двух форматов обучения, их преимущества и недостатки. Как сделать правильный выбор.
+                                    </p>
+                                    <div class="flex justify-between items-center text-sm">
+                                        <span class="text-gray-500">5 дек 2024</span>
+                                        <a href="/blog/online-vs-offline" class="text-primary hover:text-accent font-medium">
+                                            Читать →
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Article 4 -->
+                            <article class="bg-white rounded-2xl overflow-hidden shadow article-card hover-scale">
+                                <div class="h-48 overflow-hidden">
+                                    <img src="/assets/images/breadcrumb.jpg" 
+                                         alt="Мотивация" 
+                                         class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                                </div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-3">
+                                        <span class="bg-secondary text-primary px-3 py-1 rounded-full text-xs font-bold category-badge">
+                                            Мотивация
+                                        </span>
+                                        <span class="text-xs text-gray-500 read-time">4 мин</span>
+                                    </div>
+                                    <h3 class="font-heading font-bold text-lg mb-3">
+                                        10 причин начать изучать Коран прямо сейчас
+                                    </h3>
+                                    <p class="text-gray-600 text-sm mb-4">
+                                        Духовные и практические преимущества изучения Корана. Почему не стоит откладывать на потом.
+                                    </p>
+                                    <div class="flex justify-between items-center text-sm">
+                                        <span class="text-gray-500">1 дек 2024</span>
+                                        <a href="/blog/prichiny-izuchat-koran" class="text-primary hover:text-accent font-medium">
+                                            Читать →
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Older Articles -->
+                    <div>
+                        <h3 class="font-heading font-bold text-xl text-primary mb-6">
+                            Ранее опубликованные
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Article 5 -->
+                            <article class="bg-white p-6 rounded-2xl shadow article-card hover-scale">
+                                <div class="flex flex-col md:flex-row md:items-center">
+                                    <div class="md:w-1/4 mb-4 md:mb-0 md:pr-6">
+                                        <div class="h-40 md:h-24 rounded-xl overflow-hidden">
+                                            <img src="/assets/images/breadcrumb.jpg" 
+                                                 alt="Расписание" 
+                                                 class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <div class="md:w-3/4">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                                                Новости
+                                            </span>
+                                            <span class="text-xs text-gray-500">25 ноя 2024</span>
+                                        </div>
+                                        <h4 class="font-heading font-bold text-lg mb-2">
+                                            Новое расписание занятий на январь 2025 года
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mb-3">
+                                            Обновленное расписание очных и онлайн групп. Добавлены новые утренние и вечерние группы.
+                                        </p>
+                                        <a href="/blog/novoe-raspisanie" class="text-primary hover:text-accent text-sm font-medium">
+                                            Читать статью →
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Article 6 -->
+                            <article class="bg-white p-6 rounded-2xl shadow article-card hover-scale">
+                                <div class="flex flex-col md:flex-row md:items-center">
+                                    <div class="md:w-1/4 mb-4 md:mb-0 md:pr-6">
+                                        <div class="h-40 md:h-24 rounded-xl overflow-hidden">
+                                            <img src="/assets/images/breadcrumb.jpg" 
+                                                 alt="Книга" 
+                                                 class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <div class="md:w-3/4">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                                                Книги
+                                            </span>
+                                            <span class="text-xs text-gray-500">18 ноя 2024</span>
+                                        </div>
+                                        <h4 class="font-heading font-bold text-lg mb-2">
+                                            Вышло второе издание учебника «Мифтахьун-нуроний»
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mb-3">
+                                            Исправлены опечатки, добавлены новые упражнения и цветные иллюстрации.
+                                        </p>
+                                        <a href="/blog/vtoroe-izdanie" class="text-primary hover:text-accent text-sm font-medium">
+                                            Читать статью →
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Article 7 -->
+                            <article class="bg-white p-6 rounded-2xl shadow article-card hover-scale">
+                                <div class="flex flex-col md:flex-row md:items-center">
+                                    <div class="md:w-1/4 mb-4 md:mb-0 md:pr-6">
+                                        <div class="h-40 md:h-24 rounded-xl overflow-hidden">
+                                            <img src="/assets/images/breadcrumb.jpg" 
+                                                 alt="Выпускники" 
+                                                 class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <div class="md:w-3/4">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                                                События
+                                            </span>
+                                            <span class="text-xs text-gray-500">10 ноя 2024</span>
+                                        </div>
+                                        <h4 class="font-heading font-bold text-lg mb-2">
+                                            Церемония вручения дипломов выпускникам осеннего потока
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mb-3">
+                                            Фотоотчет с мероприятия и интервью с лучшими выпускниками.
+                                        </p>
+                                        <a href="/blog/vruchenie-diplomov" class="text-primary hover:text-accent text-sm font-medium">
+                                            Читать статью →
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="mt-12 flex justify-center">
+                        <nav class="flex items-center space-x-2">
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-accent transition">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-accent transition">
+                                1
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition">
+                                2
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition">
+                                3
+                            </button>
+                            <span class="px-2">...</span>
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition">
+                                8
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Search -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8">
+                        <h3 class="font-heading font-bold text-lg text-primary mb-4">
+                            Поиск по блогу
+                        </h3>
+                        <div class="relative">
+                            <input type="text" 
+                                   placeholder="Введите ключевые слова..." 
+                                   class="w-full p-3 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <button class="absolute right-3 top-3 text-gray-400 hover:text-primary">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8">
+                        <h3 class="font-heading font-bold text-lg text-primary mb-4">
+                            Категории
+                        </h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-primary transition">
+                                    <span>Таджвид</span>
+                                    <span class="bg-secondary text-primary text-xs px-2 py-1 rounded-full">12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-primary transition">
+                                    <span>Арабский язык</span>
+                                    <span class="bg-secondary text-primary text-xs px-2 py-1 rounded-full">8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-primary transition">
+                                    <span>Для начинающих</span>
+                                    <span class="bg-secondary text-primary text-xs px-2 py-1 rounded-full">15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-primary transition">
+                                    <span>Для родителей</span>
+                                    <span class="bg-secondary text-primary text-xs px-2 py-1 rounded-full">6</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-primary transition">
+                                    <span>Советы</span>
+                                    <span class="bg-secondary text-primary text-xs px-2 py-1 rounded-full">10</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center text-gray-700 hover:text-primary transition">
+                                    <span>Новости медресе</span>
+                                    <span class="bg-secondary text-primary text-xs px-2 py-1 rounded-full">5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Articles -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8">
+                        <h3 class="font-heading font-bold text-lg text-primary mb-4">
+                            Популярные статьи
+                        </h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex items-start group">
+                                <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 mr-4">
+                                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                         alt="Популярная статья" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-sm group-hover:text-primary transition line-clamp-2">
+                                        Как выбрать правильный курс для изучения Корана?
+                                    </h4>
+                                    <p class="text-xs text-gray-500 mt-1">1,542 просмотра</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-start group">
+                                <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 mr-4">
+                                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                         alt="Популярная статья" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-sm group-hover:text-primary transition line-clamp-2">
+                                        Топ-5 ошибок при изучении таджвида
+                                    </h4>
+                                    <p class="text-xs text-gray-500 mt-1">1,234 просмотра</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-start group">
+                                <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 mr-4">
+                                    <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                         alt="Популярная статья" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-sm group-hover:text-primary transition line-clamp-2">
+                                        Арабский за 30 дней: реально ли это?
+                                    </h4>
+                                    <p class="text-xs text-gray-500 mt-1">987 просмотров</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="bg-primary text-white p-6 rounded-2xl shadow-lg">
+                        <h3 class="font-heading font-bold text-lg mb-4">
+                            Подпишитесь на новости
+                        </h3>
+                        <p class="text-sm text-gray-200 mb-4">
+                            Получайте полезные статьи и новости медресе на email
+                        </p>
+                        <form class="space-y-3">
+                            <input type="email" 
+                                   placeholder="Ваш email" 
+                                   class="w-full p-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-secondary">
+                            <button type="submit" 
+                                    class="w-full bg-white text-primary font-bold py-3 rounded-full hover:bg-secondary transition">
+                                Подписаться
+                            </button>
+                        </form>
+                        <p class="text-xs text-gray-300 mt-3">
+                            Подписываясь, вы соглашаетесь с политикой конфиденциальности
+                        </p>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mt-8">
+                        <h3 class="font-heading font-bold text-lg text-primary mb-4">
+                            Следите за нами
+                        </h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
+                    Хотите изучать Коран с нами?
+                </h2>
+                <p class="text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Чтение статей — это хорошо, но практика — еще лучше. Приходите на наши курсы и научитесь читать Коран правильно.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/enroll" 
+                       class="bg-primary text-white font-bold px-8 py-3 rounded-full hover:bg-accent transition shadow-lg hover-scale">
+                        <i class="fas fa-calendar-check mr-2"></i>Записаться на курс
+                    </a>
+                    <a href="/courses" 
+                       class="border-2 border-primary text-primary font-bold px-8 py-3 rounded-full hover:bg-secondary transition hover-scale">
+                        <i class="fas fa-list mr-2"></i>Посмотреть курсы
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="/assets/js/main.js"></script>
+    
+    <!-- Blog specific scripts -->
+    <script>
+        // Search functionality
+        document.querySelector('input[type="text"]').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const query = this.value.trim();
+                if (query) {
+                    alert('Поиск статьи: ' + query);
+                    // In real implementation, this would redirect to search results
+                    // window.location.href = '/blog/search?q=' + encodeURIComponent(query);
+                }
+            }
+        });
+
+        // Category filtering
+        document.querySelectorAll('.category-badge').forEach(badge => {
+            badge.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.textContent.trim();
+                alert('Фильтрация по категории: ' + category);
+                // In real implementation, this would filter articles
+            });
+        });
+
+        // Newsletter subscription
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value.trim();
+            if (email) {
+                alert('Спасибо за подписку! На адрес ' + email + ' отправлено письмо с подтверждением.');
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>

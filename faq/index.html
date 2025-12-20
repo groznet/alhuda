@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часто задаваемые вопросы - Al-Huda Медресе | Вопросы об обучении Корану</title>
+    <meta name="description" content="Ответы на часто задаваемые вопросы об обучении в медресе Al-Huda: курсы, оплата, расписание, онлайн обучение.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .faq-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.95) 0%, rgba(139, 69, 19, 0.85) 100%);
+        }
+        .faq-item {
+            transition: all 0.3s ease;
+            border-radius: 1rem;
+        }
+        .faq-item.active {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        .category-tab {
+            transition: all 0.3s ease;
+        }
+        .category-tab.active {
+            background: #755139;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(117, 81, 57, 0.3);
+        }
+        .search-highlight {
+            background-color: #FFEB3B;
+            padding: 2px 0;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Page Header -->
+    <section class="relative py-20 faq-gradient">
+        <div class="absolute inset-0">
+            <img src="/assets/images/breadcrumb.jpg" 
+                 alt="Вопросы и ответы" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                    Часто задаваемые вопросы
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Ответы на самые популярные вопросы об обучении в медресе Al-Huda
+                </p>
+                
+                <!-- Breadcrumb -->
+                <div class="flex justify-center items-center space-x-2 text-sm">
+                    <a href="/" class="hover:text-secondary">Главная</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-secondary">Вопросы и ответы</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="font-heading font-bold text-2xl text-primary mb-4">
+                        Не нашли ответ на свой вопрос?
+                    </h2>
+                    <p class="text-gray-600">
+                        Воспользуйтесь поиском или задайте вопрос напрямую
+                    </p>
+                </div>
+                
+                <!-- Search Box -->
+                <div class="relative mb-8">
+                    <input type="text" 
+                           id="faqSearch"
+                           placeholder="Введите ваш вопрос или ключевое слово..."
+                           class="w-full p-4 pl-12 border-2 border-gray-300 rounded-2xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition text-lg">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg"></i>
+                    <button id="clearSearch" 
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary hidden">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" 
+                       class="bg-primary text-white font-bold px-6 py-3 rounded-full hover:bg-accent transition shadow-lg text-center">
+                        <i class="fas fa-question-circle mr-2"></i>Задать вопрос
+                    </a>
+                    <a href="tel:+79899033485" 
+                       class="border-2 border-primary text-primary font-bold px-6 py-3 rounded-full hover:bg-secondary transition text-center">
+                        <i class="fas fa-phone mr-2"></i>Позвонить для консультации
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories & Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- Categories Navigation -->
+            <div class="mb-12">
+                <h2 class="font-heading font-bold text-2xl text-center text-primary mb-8">
+                    Выберите категорию вопросов
+                </h2>
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button class="category-tab active px-5 py-3 rounded-full bg-secondary text-primary font-medium hover:bg-primary hover:text-white transition"
+                            data-category="all">
+                        Все вопросы
+                    </button>
+                    <button class="category-tab px-5 py-3 rounded-full bg-secondary text-primary font-medium hover:bg-primary hover:text-white transition"
+                            data-category="courses">
+                        <i class="fas fa-book mr-2"></i>Курсы
+                    </button>
+                    <button class="category-tab px-5 py-3 rounded-full bg-secondary text-primary font-medium hover:bg-primary hover:text-white transition"
+                            data-category="payment">
+                        <i class="fas fa-credit-card mr-2"></i>Оплата
+                    </button>
+                    <button class="category-tab px-5 py-3 rounded-full bg-secondary text-primary font-medium hover:bg-primary hover:text-white transition"
+                            data-category="schedule">
+                        <i class="fas fa-calendar-alt mr-2"></i>Расписание
+                    </button>
+                    <button class="category-tab px-5 py-3 rounded-full bg-secondary text-primary font-medium hover:bg-primary hover:text-white transition"
+                            data-category="online">
+                        <i class="fas fa-laptop mr-2"></i>Онлайн обучение
+                    </button>
+                    <button class="category-tab px-5 py-3 rounded-full bg-secondary text-primary font-medium hover:bg-primary hover:text-white transition"
+                            data-category="kids">
+                        <i class="fas fa-child mr-2"></i>Для детей
+                    </button>
+                </div>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Courses Category -->
+                <div class="faq-category" data-category="courses">
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-6 pb-3 border-b border-gray-200">
+                        <i class="fas fa-book mr-3"></i>Вопросы о курсах
+                    </h3>
+                    
+                    <div class="space-y-4 mb-12">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    С какого возраста можно начинать изучение Корана?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Мы принимаем детей с 5 лет в специальные детские группы. Для взрослых ограничений по возрасту нет — начать изучение Корана можно в любом возрасте.</p>
+                                    <p>Для детей 5-7 лет у нас есть игровая программа обучения, для школьников 8-15 лет — адаптированный курс с элементами игры, для взрослых — полноценная программа изучения Корана с таджвидом.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Можно ли начать обучение с нуля, не зная арабского алфавита?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Да, абсолютное большинство наших студентов начинают обучение с нуля. Наша авторская методика специально разработана для начинающих.</p>
+                                    <ul class="space-y-2 mb-3">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>Первые занятия посвящены изучению арабского алфавита</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>Мы используем специальные пособия на русском языке</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>Поэтапный подход от простого к сложному</span>
+                                        </li>
+                                    </ul>
+                                    <p>Уже через 1-2 месяца регулярных занятий студенты начинают читать простые слова и короткие суры.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Как часто проходят занятия и сколько длится урок?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Расписание зависит от выбранного курса и формата обучения:</p>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                        <div class="bg-secondary p-4 rounded-xl">
+                                            <h5 class="font-bold mb-2">Очные занятия</h5>
+                                            <ul class="text-sm space-y-1">
+                                                <li>• 2-3 раза в неделю</li>
+                                                <li>• Продолжительность: 60-90 минут</li>
+                                                <li>• Утренние, дневные и вечерние группы</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bg-secondary p-4 rounded-xl">
+                                            <h5 class="font-bold mb-2">Онлайн занятия</h5>
+                                            <ul class="text-sm space-y-1">
+                                                <li>• 2 раза в неделю</li>
+                                                <li>• Продолжительность: 60 минут</li>
+                                                <li>• Гибкое расписание</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p>Точное расписание согласовывается при записи на курс с учетом ваших пожеланий и доступности групп.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Category -->
+                <div class="faq-category" data-category="payment">
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-6 pb-3 border-b border-gray-200">
+                        <i class="fas fa-credit-card mr-3"></i>Вопросы об оплате
+                    </h3>
+                    
+                    <div class="space-y-4 mb-12">
+                        <!-- FAQ 4 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Сколько стоит обучение и что включено в стоимость?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Стоимость обучения зависит от выбранного курса и формата:</p>
+                                    <div class="overflow-x-auto mb-4">
+                                        <table class="min-w-full bg-white border border-gray-300 rounded-lg overflow-hidden">
+                                            <thead class="bg-primary text-white">
+                                                <tr>
+                                                    <th class="py-3 px-4 text-left">Курс</th>
+                                                    <th class="py-3 px-4 text-left">Стоимость в месяц</th>
+                                                    <th class="py-3 px-4 text-left">Что включено</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b border-gray-200">
+                                                    <td class="py-3 px-4">Коран с таджвидом</td>
+                                                    <td class="py-3 px-4 font-bold text-primary">от 2 500 ₽</td>
+                                                    <td class="py-3 px-4 text-sm">Занятия, учебные материалы, проверка</td>
+                                                </tr>
+                                                <tr class="border-b border-gray-200">
+                                                    <td class="py-3 px-4">Арабский язык</td>
+                                                    <td class="py-3 px-4 font-bold text-primary">от 3 000 ₽</td>
+                                                    <td class="py-3 px-4 text-sm">Занятия, учебник, аудиоматериалы</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-3 px-4">Детские группы</td>
+                                                    <td class="py-3 px-4 font-bold text-primary">от 2 000 ₽</td>
+                                                    <td class="py-3 px-4 text-sm">Занятия, игровые материалы, сертификат</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>Первое пробное занятие — бесплатно. При оплате за 3 месяца вперед — скидка 10%.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Какие способы оплаты доступны?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Мы принимаем оплату несколькими способами:</p>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                                        <div class="text-center p-3 border border-gray-200 rounded-xl">
+                                            <i class="fas fa-money-bill-wave text-2xl text-green-500 mb-2"></i>
+                                            <p class="text-sm font-medium">Наличные</p>
+                                        </div>
+                                        <div class="text-center p-3 border border-gray-200 rounded-xl">
+                                            <i class="fas fa-credit-card text-2xl text-blue-500 mb-2"></i>
+                                            <p class="text-sm font-medium">Банковская карта</p>
+                                        </div>
+                                        <div class="text-center p-3 border border-gray-200 rounded-xl">
+                                            <i class="fab fa-sberbank text-2xl text-green-600 mb-2"></i>
+                                            <p class="text-sm font-medium">Сбербанк Онлайн</p>
+                                        </div>
+                                        <div class="text-center p-3 border border-gray-200 rounded-xl">
+                                            <i class="fas fa-mobile-alt text-2xl text-purple-500 mb-2"></i>
+                                            <p class="text-sm font-medium">Мобильный банк</p>
+                                        </div>
+                                    </div>
+                                    <p>Оплатить можно как в медресе, так и онлайн через мобильное приложение банка. Квитанцию об оплате вы получите на email.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Есть ли возможность оплаты в рассрочку?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p>Да, мы предлагаем гибкие условия оплаты:</p>
+                                    <ul class="space-y-3 my-4">
+                                        <li class="flex items-start">
+                                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <span class="text-white text-sm">1</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium">Ежемесячная оплата</p>
+                                                <p class="text-sm text-gray-600">Оплата в начале каждого месяца обучения</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <span class="text-white text-sm">2</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium">Оплата за блок занятий</p>
+                                                <p class="text-sm text-gray-600">Оплата за 8 или 12 занятий со скидкой 5%</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <span class="text-white text-sm">3</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium">Индивидуальные условия</p>
+                                                <p class="text-sm text-gray-600">Для студентов, семей и многодетных родителей</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="text-sm text-gray-600">Для обсуждения индивидуальных условий оплаты свяжитесь с нами по телефону или через форму обратной связи.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schedule Category -->
+                <div class="faq-category" data-category="schedule">
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-6 pb-3 border-b border-gray-200">
+                        <i class="fas fa-calendar-alt mr-3"></i>Вопросы о расписании
+                    </h3>
+                    
+                    <div class="space-y-4 mb-12">
+                        <!-- FAQ 7 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Можно ли изменить время занятий в процессе обучения?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Да, мы стараемся идти навстречу нашим студентам и предлагаем гибкие условия:</p>
+                                    <ul class="space-y-2 mb-4">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                            <span>Переход в другую группу с удобным расписанием</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                            <span>Перенос пропущенных занятий (при предупреждении за 24 часа)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                            <span>Индивидуальные занятия по гибкому графику</span>
+                                        </li>
+                                    </ul>
+                                    <p>Для изменения расписания необходимо связаться с администратором за 3 дня до желаемой даты изменения.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 8 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Что делать, если я пропустил занятие?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Мы понимаем, что обстоятельства бывают разные, поэтому предлагаем несколько вариантов:</p>
+                                    <div class="bg-secondary p-4 rounded-xl mb-4">
+                                        <h5 class="font-bold mb-2">При пропуске по уважительной причине:</h5>
+                                        <ul class="text-sm space-y-1">
+                                            <li>• Предоставляется запись онлайн-занятия (для смешанных групп)</li>
+                                            <li>• Возможность отработки на индивидуальном занятии</li>
+                                            <li>• Перенос оплаты на следующий месяц</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-secondary p-4 rounded-xl">
+                                        <h5 class="font-bold mb-2">Важно:</h5>
+                                        <ul class="text-sm space-y-1">
+                                            <li>• Предупредите администратора за 24 часа до занятия</li>
+                                            <li>• Сохраняйте учебные материалы и домашние задания</li>
+                                            <li>• Свяжитесь с преподавателем для консультации</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Learning Category -->
+                <div class="faq-category" data-category="online">
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-6 pb-3 border-b border-gray-200">
+                        <i class="fas fa-laptop mr-3"></i>Вопросы об онлайн обучении
+                    </h3>
+                    
+                    <div class="space-y-4 mb-12">
+                        <!-- FAQ 9 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Какое оборудование нужно для онлайн занятий?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Для комфортного онлайн-обучения потребуется:</p>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                        <div class="border border-gray-200 rounded-xl p-4">
+                                            <h5 class="font-bold mb-2 text-primary">Обязательно:</h5>
+                                            <ul class="text-sm space-y-1">
+                                                <li>• Смартфон, планшет или компьютер</li>
+                                                <li>• Стабильный интернет (от 5 Мбит/с)</li>
+                                                <li>• Приложение Zoom (бесплатно)</li>
+                                                <li>• Наушники с микрофоном</li>
+                                            </ul>
+                                        </div>
+                                        <div class="border border-gray-200 rounded-xl p-4">
+                                            <h5 class="font-bold mb-2 text-accent">Рекомендуется:</h5>
+                                            <ul class="text-sm space-y-1">
+                                                <li>• Внешняя веб-камера</li>
+                                                <li>• Настольная лампа для хорошего освещения</li>
+                                                <li>• Тетрадь и ручка для записей</li>
+                                                <li>• Учебное пособие (можно купить у нас)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Перед первым занятием мы проводим тестовую связь, чтобы проверить оборудование и помочь с настройками.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 10 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Онлайн обучение такое же эффективное, как очное?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Да, онлайн-обучение в нашем медресе имеет сопоставимую эффективность с очным форматом благодаря:</p>
+                                    <ul class="space-y-3 mb-4">
+                                        <li class="flex items-start">
+                                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <i class="fas fa-chalkboard-teacher text-white text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium">Интерактивные занятия</p>
+                                                <p class="text-sm text-gray-600">Преподаватель видит и слышит каждого студента, дает индивидуальные рекомендации</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <i class="fas fa-video text-white text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium">Записи занятий</p>
+                                                <p class="text-sm text-gray-600">Все онлайн-занятия записываются, вы можете пересмотреть их в любое время</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <i class="fas fa-tasks text-white text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium">Контроль прогресса</p>
+                                                <p class="text-sm text-gray-600">Регулярные проверки домашних заданий и тестирования</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p>По статистике, 92% онлайн-студентов успешно завершают курсы и получают дипломы.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kids Category -->
+                <div class="faq-category" data-category="kids">
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-6 pb-3 border-b border-gray-200">
+                        <i class="fas fa-child mr-3"></i>Вопросы об обучении детей
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- FAQ 11 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Как проходит обучение детей? Есть ли игровые элементы?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Обучение детей в нашем медресе построено на игровой методике:</p>
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                        <div class="text-center p-4 bg-secondary rounded-xl">
+                                            <i class="fas fa-gamepad text-3xl text-primary mb-3"></i>
+                                            <p class="font-bold">Игровые занятия</p>
+                                            <p class="text-sm">Карточки, пазлы, мемори игры</p>
+                                        </div>
+                                        <div class="text-center p-4 bg-secondary rounded-xl">
+                                            <i class="fas fa-music text-3xl text-primary mb-3"></i>
+                                            <p class="font-bold">Песни и стихи</p>
+                                            <p class="text-sm">Запоминание через ритм и мелодию</p>
+                                        </div>
+                                        <div class="text-center p-4 bg-secondary rounded-xl">
+                                            <i class="fas fa-award text-3xl text-primary mb-3"></i>
+                                            <p class="font-bold">Система поощрений</p>
+                                            <p class="text-sm">Звездочки, наклейки, сертификаты</p>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                            <span>Занятия длятся 45 минут (для детей 5-7 лет) или 60 минут (8-15 лет)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                            <span>Перерывы на физическую активность каждые 20 минут</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                            <span>Группы формируются по возрасту и уровню подготовки</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 12 -->
+                        <div class="faq-item bg-white rounded-2xl p-1">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 rounded-2xl transition">
+                                <h4 class="font-heading font-bold text-lg pr-8">
+                                    Могут ли родители присутствовать на занятиях детей?
+                                </h4>
+                                <div class="faq-icon w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chevron-down text-primary"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6 text-gray-700">
+                                    <p class="mb-3">Да, мы приветствуем участие родителей в образовательном процессе:</p>
+                                    <div class="space-y-4">
+                                        <div class="bg-secondary p-4 rounded-xl">
+                                            <h5 class="font-bold mb-2">Для детей 5-7 лет:</h5>
+                                            <p class="text-sm">Родители могут присутствовать на первых 2-3 занятиях, чтобы ребенок адаптировался. После этого рекомендуем оставлять ребенка одного для развития самостоятельности.</p>
+                                        </div>
+                                        <div class="bg-secondary p-4 rounded-xl">
+                                            <h5 class="font-bold mb-2">Для детей 8-15 лет:</h5>
+                                            <p class="text-sm">Родители могут присутствовать на первом пробном занятии. Далее занятия проходят без родителей для создания учебной атмосферы.</p>
+                                        </div>
+                                        <div class="bg-secondary p-4 rounded-xl">
+                                            <h5 class="font-bold mb-2">Обратная связь для родителей:</h5>
+                                            <ul class="text-sm space-y-1">
+                                                <li>• Ежемесячные отчеты о прогрессе</li>
+                                                <li>• Индивидуальные консультации с преподавателем</li>
+                                                <li>• Родительские собрания 2 раза в год</li>
+                                                <li>• Доступ к учебным материалам</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-question text-white text-3xl"></i>
+                    </div>
+                    <h2 class="font-heading font-bold text-3xl text-primary mb-4">
+                        Остались вопросы?
+                    </h2>
+                    <p class="text-gray-700 mb-8">
+                        Не нашли ответ на свой вопрос? Свяжитесь с нами напрямую — мы с радостью поможем!
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                        <a href="tel:+79899033485" 
+                           class="bg-primary text-white p-4 rounded-xl hover:bg-accent transition flex flex-col items-center justify-center">
+                            <i class="fas fa-phone text-2xl mb-2"></i>
+                            <span class="font-bold">Позвонить</span>
+                            <span class="text-sm">+7 (989) 903-34-85</span>
+                        </a>
+                        <a href="https://wa.me/+79899033485" 
+                           target="_blank"
+                           class="bg-green-500 text-white p-4 rounded-xl hover:bg-green-600 transition flex flex-col items-center justify-center">
+                            <i class="fab fa-whatsapp text-2xl mb-2"></i>
+                            <span class="font-bold">WhatsApp</span>
+                            <span class="text-sm">Быстрый ответ</span>
+                        </a>
+                        <a href="/contact" 
+                           class="bg-accent text-white p-4 rounded-xl hover:bg-primary transition flex flex-col items-center justify-center">
+                            <i class="fas fa-envelope text-2xl mb-2"></i>
+                            <span class="font-bold">Написать</span>
+                            <span class="text-sm">Форма обратной связи</span>
+                        </a>
+                    </div>
+                    
+                    <p class="text-gray-600 text-sm">
+                        Мы отвечаем в течение 2 часов в рабочее время (09:00-22:00)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- FAQ functionality -->
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // If the clicked item wasn't active, open it
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Category filtering
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                document.querySelectorAll('.category-tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                tab.classList.add('active');
+                
+                const category = tab.getAttribute('data-category');
+                
+                // Show/hide FAQ categories
+                document.querySelectorAll('.faq-category').forEach(categoryEl => {
+                    if (category === 'all' || categoryEl.getAttribute('data-category') === category) {
+                        categoryEl.style.display = 'block';
+                    } else {
+                        categoryEl.style.display = 'none';
+                    }
+                });
+                
+                // Reset search
+                document.getElementById('faqSearch').value = '';
+                document.getElementById('clearSearch').classList.add('hidden');
+                removeHighlights();
+            });
+        });
+
+        // Search functionality
+        const faqSearch = document.getElementById('faqSearch');
+        const clearSearch = document.getElementById('clearSearch');
+        
+        faqSearch.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm.length > 0) {
+                clearSearch.classList.remove('hidden');
+                
+                // Remove previous highlights
+                removeHighlights();
+                
+                // Search in all FAQ items
+                let foundResults = false;
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    const question = item.querySelector('.faq-question h4').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        highlightText(item, searchTerm);
+                        foundResults = true;
+                        
+                        // Ensure parent category is visible
+                        const category = item.closest('.faq-category');
+                        if (category) {
+                            category.style.display = 'block';
+                        }
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Show message if no results
+                const resultsContainer = document.querySelector('.faq-category');
+                if (!foundResults && resultsContainer) {
+                    resultsContainer.innerHTML = `
+                        <div class="text-center py-12">
+                            <i class="fas fa-search text-4xl text-gray-300 mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-700 mb-2">Ничего не найдено</h3>
+                            <p class="text-gray-600 mb-6">Попробуйте изменить поисковый запрос или задайте вопрос напрямую</p>
+                            <a href="/contact" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-accent transition">
+                                Задать вопрос
+                            </a>
+                        </div>
+                    `;
+                }
+            } else {
+                clearSearch.classList.add('hidden');
+                removeHighlights();
+                
+                // Reset to show all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.style.display = 'block';
+                });
+                
+                // Reset category visibility based on active tab
+                const activeTab = document.querySelector('.category-tab.active');
+                if (activeTab) {
+                    const category = activeTab.getAttribute('data-category');
+                    
+                    document.querySelectorAll('.faq-category').forEach(categoryEl => {
+                        if (category === 'all' || categoryEl.getAttribute('data-category') === category) {
+                            categoryEl.style.display = 'block';
+                        } else {
+                            categoryEl.style.display = 'none';
+                        }
+                    });
+                }
+            }
+        });
+        
+        clearSearch.addEventListener('click', function() {
+            faqSearch.value = '';
+            this.classList.add('hidden');
+            removeHighlights();
+            
+            // Reset to show all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.style.display = 'block';
+            });
+            
+            // Reset category visibility
+            const activeTab = document.querySelector('.category-tab.active');
+            if (activeTab) {
+                const category = activeTab.getAttribute('data-category');
+                
+                document.querySelectorAll('.faq-category').forEach(categoryEl => {
+                    if (category === 'all' || categoryEl.getAttribute('data-category') === category) {
+                        categoryEl.style.display = 'block';
+                    } else {
+                        categoryEl.style.display = 'none';
+                    }
+                });
+            }
+        });
+        
+        function highlightText(element, searchTerm) {
+            const walker = document.createTreeWalker(
+                element,
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+            
+            const nodes = [];
+            let node;
+            while (node = walker.nextNode()) {
+                nodes.push(node);
+            }
+            
+            nodes.forEach(node => {
+                const text = node.textContent;
+                const regex = new RegExp(`(${searchTerm})`, 'gi');
+                const newText = text.replace(regex, '<span class="search-highlight">$1</span>');
+                
+                if (newText !== text) {
+                    const span = document.createElement('span');
+                    span.innerHTML = newText;
+                    node.parentNode.replaceChild(span, node);
+                }
+            });
+        }
+        
+        function removeHighlights() {
+            document.querySelectorAll('.search-highlight').forEach(highlight => {
+                const parent = highlight.parentNode;
+                parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+                parent.normalize();
+            });
+        }
+        
+        // Auto-open FAQ if URL contains hash
+        window.addEventListener('load', () => {
+            if (window.location.hash) {
+                const faqId = window.location.hash.substring(1);
+                const targetElement = document.querySelector(`[data-faq="${faqId}"]`);
+                
+                if (targetElement) {
+                    targetElement.click();
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 300);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

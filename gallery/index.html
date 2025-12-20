@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Al-Huda Медресе | Фото нашей школы</title>
+    <meta name="description" content="Фотогалерея медресе Al-Huda: занятия, мероприятия, учебный процесс в Курчалое.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .gallery-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.95) 0%, rgba(139, 69, 19, 0.85) 100%);
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .view-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        .gallery-item:hover .view-icon {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .view-icon i {
+            color: #755139;
+            font-size: 1.5rem;
+            margin-left: 3px;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Page Header -->
+    <section class="relative py-20 gallery-gradient">
+        <div class="absolute inset-0">
+            <img src="/assets/images/breadcrumb.jpg" 
+                 alt="Галерея медресе" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                    Галерея
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Фотографии из жизни нашего медресе
+                </p>
+                
+                <!-- Breadcrumb -->
+                <div class="flex justify-center items-center space-x-2 text-sm">
+                    <a href="/" class="hover:text-secondary">Главная</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-secondary">Галерея</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Photo Gallery -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Photo 1 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/1.jpg" 
+                         alt="Занятие по таджвиду" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1544716278-e7f9c0eeb0c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Занятие по таджвиду</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Групповое занятие для начинающих</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/2.jpg" 
+                         alt="Религиозный праздник" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Религиозный праздник</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Традиционное мероприятие в медресе</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/3.jpg" 
+                         alt="Вручение дипломов" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Вручение дипломов</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Выпускники получают сертификаты</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/4.jpg" 
+                         alt="Библиотека медресе" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Библиотека медресе</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Книжный фонд для студентов</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/5.jpg" 
+                         alt="Индивидуальное занятие" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Индивидуальный урок</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Работа с преподавателем один на один</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/6.jpg" 
+                         alt="Детский праздник" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Детский праздник</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Развлекательное мероприятие для детей</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 7 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/7.jpg" 
+                         alt="Лучшие выпускники" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Лучшие выпускники</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Награждение отличников учебы</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 8 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/8.jpg" 
+                         alt="Актовый зал" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Актовый зал</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Просторное помещение для мероприятий</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 9 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/9.jpg" 
+                         alt="Детская группа" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1560421683-258634654881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Детская группа</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Малыши изучают арабский алфавит</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 10 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/10.jpg" 
+                         alt="Конкурс чтецов" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Конкурс чтецов</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Ежегодный конкурс чтения Корана</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 11 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/11.jpg" 
+                         alt="Семейный выпускной" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Семейный выпускной</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Родители поздравляют выпускников</p> -->
+                    </div>
+                </div>
+
+                <!-- Photo 12 -->
+                <div class="gallery-item h-64">
+                    <div class="view-icon">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <img src="../assets/gallery/12.jpg" 
+                         alt="Онлайн-класс" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="gallery-overlay">
+                        <!-- <h3 class="font-heading font-bold text-lg">Онлайн-класс</h3> -->
+                        <!-- <p class="text-sm text-gray-200">Оборудование для дистанционного обучения</p> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Description -->
+            <div class="text-center mt-16 max-w-3xl mx-auto">
+                <h2 class="font-heading font-bold text-2xl text-primary mb-6">
+                    Жизнь нашего медресе в фотографиях
+                </h2>
+                <p class="text-gray-700 mb-8">
+                    Здесь вы можете увидеть, как проходят занятия, мероприятия и праздники в нашем медресе. 
+                    Каждая фотография отражает теплую атмосферу и серьезный подход к обучению.
+                </p>
+                <p class="text-gray-600 text-sm">
+                    Наведите курсор на фотографии, чтобы увидеть описание
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple CTA -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="font-heading font-bold text-3xl text-primary mb-6">
+                    Хотите увидеть все своими глазами?
+                </h2>
+                <p class="text-gray-700 mb-8">
+                    Приходите на бесплатный пробный урок и убедитесь в качестве нашего обучения
+                </p>
+                
+                <a href="/contact" 
+                   class="inline-block bg-primary text-white font-bold px-8 py-3 rounded-full hover:bg-accent transition shadow-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i>Записаться на пробный урок
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Simple gallery functionality -->
+    <script>
+        // Simple image click to open in new tab
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                if (img && img.src) {
+                    // Open image in new tab for better viewing
+                    window.open(img.src, '_blank');
+                }
+            });
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                // Close any open modals (if implemented in future)
+                console.log('Escape pressed - can be used for closing modals');
+            }
+        });
+
+        // Lazy loading for better performance
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery-item img');
+            
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        // Image is already loaded, just mark as visible
+                        img.classList.add('loaded');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        });
+
+        // Add touch support for mobile
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            let touchStartTime;
+            
+            item.addEventListener('touchstart', function() {
+                touchStartTime = Date.now();
+                this.classList.add('touched');
+            });
+            
+            item.addEventListener('touchend', function(e) {
+                const touchDuration = Date.now() - touchStartTime;
+                
+                // If it's a short tap (not a long press)
+                if (touchDuration < 500) {
+                    e.preventDefault();
+                    const img = this.querySelector('img');
+                    if (img && img.src) {
+                        // Simulate hover effect on mobile
+                        this.classList.toggle('mobile-active');
+                        
+                        // Open image after a short delay to show the hover effect
+                        setTimeout(() => {
+                            window.open(img.src, '_blank');
+                        }, 300);
+                    }
+                }
+                this.classList.remove('touched');
+            });
+        });
+
+        // Add CSS for mobile touch feedback
+        const style = document.createElement('style');
+        style.textContent = `
+            .gallery-item.mobile-active {
+                transform: translateY(-5px) !important;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+            }
+            .gallery-item.mobile-active img {
+                transform: scale(1.05) !important;
+            }
+            .gallery-item.mobile-active .gallery-overlay {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+            .gallery-item.mobile-active .view-icon {
+                opacity: 1 !important;
+                transform: translate(-50%, -50%) scale(1) !important;
+            }
+            @media (max-width: 768px) {
+                .gallery-item {
+                    cursor: pointer;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Al-Huda Медресе | Школа Корана в Курчалое</title>
+    <meta name="description" content="История и миссия медресе Al-Huda в Курчалое. Авторская методика обучения Корану, преподаватели, достижения.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .about-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.95) 0%, rgba(139, 69, 19, 0.85) 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 24px;
+            width: 12px;
+            height: 12px;
+            background: #755139;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .timeline-line:before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Page Header -->
+    <section class="relative py-20 about-gradient">
+        <div class="absolute inset-0">
+            <img src="/assets/images/breadcrumb.jpg" 
+                 alt="Медресе Al-Huda" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                    О медресе Al-Huda
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Добро пожаловать в школу изучения Корана, где каждая буква приближает к Аллаху
+                </p>
+                
+                <!-- Breadcrumb -->
+                <div class="flex justify-center items-center space-x-2 text-sm">
+                    <a href="/" class="hover:text-secondary">Главная</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-secondary">О нас</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Mission -->
+                <div class="bg-secondary p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h2 class="font-heading font-bold text-3xl text-primary mb-4">
+                        Наша миссия
+                    </h2>
+                    <p class="text-gray-700 mb-4">
+                        Распространять знание Корана и обучать правильному чтению Священного Писания в соответствии с традициями и научными методами.
+                    </p>
+                    <p class="text-gray-700">
+                        Мы стремимся сделать изучение Корана доступным и понятным для каждого мусульманина, независимо от возраста и уровня подготовки.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="bg-secondary p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-white text-2xl"></i>
+                    </div>
+                    <h2 class="font-heading font-bold text-3xl text-accent mb-4">
+                        Наше видение
+                    </h2>
+                    <p class="text-gray-700 mb-4">
+                        Стать ведущей школой изучения Корана в Чеченской Республике, признанной за качество образования и авторскую методику.
+                    </p>
+                    <p class="text-gray-700">
+                        Мы видим общество, где каждый мусульманин читает Коран правильно, понимает его смысл и применяет в повседневной жизни.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                        История создания
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Как маленькая мечта превратилась в школу, где обучаются сотни студентов
+                    </p>
+                </div>
+                
+                <!-- Timeline -->
+                <div class="relative timeline-line pl-8 md:pl-0">
+                    <!-- Timeline Item 1 -->
+                    <div class="relative mb-12 timeline-item">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg md:ml-12">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">2018</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-xl text-primary">Начало пути</h3>
+                            </div>
+                            <p class="text-gray-700">
+                                Основатель медресе, Дени, начал преподавать Коран в своем доме для нескольких учеников. 
+                                Первые занятия проходили в небольшой комнате, где собирались 5-7 человек.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="relative mb-12 timeline-item">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg md:ml-12">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">2019</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-xl text-primary">Разработка методики</h3>
+                            </div>
+                            <p class="text-gray-700">
+                                На основе многолетнего опыта преподавания была разработана авторская методика "Аль-Худа", 
+                                сочетающая традиционные подходы с современными педагогическими техниками.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="relative mb-12 timeline-item">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg md:ml-12">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">2020</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-xl text-primary">Открытие медресе</h3>
+                            </div>
+                            <p class="text-gray-700">
+                                Был арендован первый учебный класс в центре Курчалоя. Начали работу 3 группы: 
+                                детская, женская и мужская. Общее количество учеников достигло 45 человек.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 4 -->
+                    <div class="relative timeline-item">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg md:ml-12">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">2024</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-xl text-primary">Современное медресе</h3>
+                            </div>
+                            <p class="text-gray-700">
+                                Сегодня Al-Huda Медресе - это полноценная школа с онлайн и очным обучением, 
+                                собственным учебным пособием, 6 преподавателями и более 200 учеников ежегодно.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Methodology -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Авторская методика обучения
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Уникальный подход, разработанный специально для эффективного изучения Корана
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Principle 1 -->
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-layer-group text-white text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-4">Поэтапность</h3>
+                    <p class="text-gray-700">
+                        Обучение строится от простого к сложному: алфавит → чтение → таджвид → хафиз. 
+                        Каждый этап завершается проверкой знаний.
+                    </p>
+                </div>
+                
+                <!-- Principle 2 -->
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-white text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-4">Интерактивность</h3>
+                    <p class="text-gray-700">
+                        Активное вовлечение учеников через диалоги, групповые задания, аудио-визуальные материалы 
+                        и современные образовательные технологии.
+                    </p>
+                </div>
+                
+                <!-- Principle 3 -->
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-cog text-white text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-4">Индивидуальность</h3>
+                    <p class="text-gray-700">
+                        Для каждого ученика составляется индивидуальная программа с учетом его способностей, 
+                        темпа обучения и личных целей.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Methodology Details -->
+            <div class="mt-16 bg-secondary p-8 rounded-2xl">
+                <h3 class="font-heading font-bold text-2xl text-primary mb-6">Ключевые элементы методики</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Адаптированные учебные материалы на русском языке</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Регулярный контроль произношения</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Аудио-визуальные пособия для правильного произношения</span>
+                        </li>
+                    </ul>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Поэтапное заучивание сур</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Практика чтения в группе</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Подготовка к самостоятельному чтению Корана</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers / Team -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Наши преподаватели
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Опытные педагоги с традиционным исламским образованием и современным подходом к обучению
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teacher 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="h-64 bg-primary relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-user-tie text-white text-8xl opacity-50"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <h3 class="font-heading font-bold text-xl text-white">Дени (Основатель)</h3>
+                            <p class="text-gray-200 text-sm">Преподаватель Корана с таджвидом</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Образование</p>
+                                <p class="font-medium">Исламский университет</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Опыт</p>
+                                <p class="font-medium">12 лет преподавания</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 text-sm">
+                            Автор методики "Аль-Худа". Специализируется на преподавании таджвида для взрослых.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Teacher 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="h-64 bg-accent relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-white text-8xl opacity-50"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <h3 class="font-heading font-bold text-xl text-white">Амина</h3>
+                            <p class="text-gray-200 text-sm">Преподаватель для детей</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Образование</p>
+                                <p class="font-medium">Педагогический колледж</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Опыт</p>
+                                <p class="font-medium">8 лет с детьми</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 text-sm">
+                            Специалист по игровому обучению. Автор детской программы "Коран для малышей".
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Teacher 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="h-64 bg-primary relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-language text-white text-8xl opacity-50"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <h3 class="font-heading font-bold text-xl text-white">Абдурахман</h3>
+                            <p class="text-gray-200 text-sm">Преподаватель арабского</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Образование</p>
+                                <p class="font-medium">Арабский университет</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Опыт</p>
+                                <p class="font-medium">10 лет преподавания</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 text-sm">
+                            Носитель арабского языка. Специализируется на разговорном арабском и грамматике.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Statistics -->
+    <section class="py-16" style="background: linear-gradient(135deg, #755139 0%, #8B4513 100%);">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mb-4">
+                    Наши достижения
+                </h2>
+                <p class="text-xl text-gray-100 max-w-2xl mx-auto">
+                    Цифры, которые говорят сами за себя
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Stat 1 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">6+</div>
+                    <p class="text-gray-200">лет работы</p>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">200+</div>
+                    <p class="text-gray-200">выпускников ежегодно</p>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">98%</div>
+                    <p class="text-gray-200">довольных учеников</p>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">100%</div>
+                    <p class="text-gray-200">диплом по окончании</p>
+                </div>
+            </div>
+            
+            <!-- Additional Stats -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center">
+                    <i class="fas fa-book text-white text-3xl mb-3"></i>
+                    <p class="text-gray-100">Авторское учебное пособие</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center">
+                    <i class="fas fa-laptop text-white text-3xl mb-3"></i>
+                    <p class="text-gray-100">Онлайн и очное обучение</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-center">
+                    <i class="fas fa-users text-white text-3xl mb-3"></i>
+                    <p class="text-gray-100">3 возрастные группы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Facilities -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Location Info -->
+                <div>
+                    <h2 class="font-heading font-bold text-3xl text-primary mb-6">
+                        Наше медресе в Курчалое
+                    </h2>
+                    <p class="text-gray-700 mb-6">
+                        Мы находимся в центре города Курчалой в удобном и доступном месте. 
+                        Наше медресе оборудовано всем необходимым для комфортного обучения.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Просторные и светлые классы</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Библиотека с исламской литературой</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Отдельные классы для мужчин и женщин</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Комната для омовения</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Парковка для автомобилей</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-secondary p-6 rounded-2xl">
+                        <h3 class="font-heading font-bold text-lg mb-3">Адрес</h3>
+                        <p class="text-gray-700 mb-2">
+                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                            г. Курчалой, Чеченская Республика
+                        </p>
+                        <p class="text-gray-700">
+                            ул. Кадырова 51, 366319
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Location Map -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-96 flex flex-col items-center justify-center bg-gradient-to-br from-primary/20 to-accent/20">
+                        <i class="fas fa-map-marked-alt text-primary text-6xl mb-4"></i>
+                        <p class="text-gray-700 text-center px-4">
+                            Карта расположения медресе Al-Huda в Курчалое
+                        </p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            (Google Maps widget will be embedded here)
+                        </p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-lg mb-2">Как добраться</h3>
+                        <p class="text-gray-600 text-sm">
+                            Мы находимся в центре города, рядом с центральной мечетью. 
+                            Доступен общественный транспорт, остановка "Центральный рынок".
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center bg-white p-8 rounded-2xl shadow-lg">
+                <h2 class="font-heading font-bold text-3xl text-primary mb-6">
+                    Присоединяйтесь к нашей общине
+                </h2>
+                <p class="text-gray-700 mb-8">
+                    Начните свой путь изучения Корана в дружественной и поддерживающей атмосфере медресе Al-Huda
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/enroll" 
+                       class="bg-primary text-white font-bold px-8 py-3 rounded-full hover:bg-accent transition shadow-lg">
+                        <i class="fas fa-user-plus mr-2"></i>Записаться на курс
+                    </a>
+                    <a href="/contact" 
+                       class="border-2 border-primary text-primary font-bold px-8 py-3 rounded-full hover:bg-secondary transition">
+                        <i class="fas fa-phone mr-2"></i>Задать вопрос
+                    </a>
+                </div>
+                
+                <p class="mt-8 text-gray-500 text-sm">
+                    Есть вопросы? Мы всегда готовы помочь! Звоните: 
+                    <a href="tel:+79899033485" class="text-primary font-medium">+7 (989) 903-34-85</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

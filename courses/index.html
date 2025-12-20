@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы - Al-Huda Медресе | Обучение Корану с таджвидом</title>
+    <meta name="description" content="Все курсы медресе Al-Huda: Коран с таджвидом, арабский язык, детские группы. Очные и онлайн занятия в Курчалое.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .course-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.95) 0%, rgba(139, 69, 19, 0.85) 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        .badge-online {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        .badge-offline {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .badge-kids {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Page Header -->
+    <section class="relative py-20 course-gradient">
+        <div class="absolute inset-0">
+            <img src="/assets/images/breadcrumb.jpg" 
+                 alt="Изучение Корана" 
+                 class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl text-center mx-auto text-white">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                    Наши курсы
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Выберите подходящую программу обучения. Все курсы доступны в очном и онлайн формате. 
+                    По окончании выдается диплом.
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                        <div class="text-2xl font-bold">6+</div>
+                        <div class="text-sm">курсов</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                        <div class="text-2xl font-bold">2</div>
+                        <div class="text-sm">формата</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                        <div class="text-2xl font-bold">3+</div>
+                        <div class="text-sm">возрастные группы</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                        <div class="text-2xl font-bold">100%</div>
+                        <div class="text-sm">диплом</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Категории курсов
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Программы обучения для разных целей и уровней подготовки
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Category 1 -->
+                <a href="#quran-courses" 
+                   class="group bg-secondary p-6 rounded-2xl shadow-lg hover-scale text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-book-quran text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-2">Коран с таджвидом</h3>
+                    <p class="text-gray-600 text-sm">
+                        Правильное чтение Корана с соблюдением всех правил
+                    </p>
+                </a>
+                
+                <!-- Category 2 -->
+                <a href="#arabic-courses" 
+                   class="group bg-secondary p-6 rounded-2xl shadow-lg hover-scale text-center">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-language text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-2">Арабский язык</h3>
+                    <p class="text-gray-600 text-sm">
+                        Изучение арабского алфавита и грамматики
+                    </p>
+                </a>
+                
+                <!-- Category 3 -->
+                <a href="#kids-courses" 
+                   class="group bg-secondary p-6 rounded-2xl shadow-lg hover-scale text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-child text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-2">Для детей</h3>
+                    <p class="text-gray-600 text-sm">
+                        Специальные программы для детей от 5 лет
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Courses List -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Quran Courses -->
+            <div id="quran-courses" class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book-quran text-white"></i>
+                    </div>
+                    <h2 class="font-heading font-bold text-3xl text-primary">
+                        Курсы Корана с таджвидом
+                    </h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Course 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-primary p-6 flex flex-col justify-center items-center">
+                                <i class="fas fa-star text-white text-4xl mb-4"></i>
+                                <span class="text-white font-bold text-lg">Начальный</span>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="font-heading font-bold text-xl">Основы чтения Корана</h3>
+                                    <div class="flex space-x-2">
+                                        <span class="badge-online text-white text-xs px-3 py-1 rounded-full">
+                                            Онлайн
+                                        </span>
+                                        <span class="badge-offline text-white text-xs px-3 py-1 rounded-full">
+                                            Очно
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-4">
+                                    Изучение арабского алфавита, правил чтения и основ таджвида. Для начинающих с нуля.
+                                </p>
+                                
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-clock text-primary mr-2"></i>
+                                        <span>24 занятия (3 месяца)</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-users text-primary mr-2"></i>
+                                        <span>Группы 5-8 человек</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-certificate text-primary mr-2"></i>
+                                        <span>Сертификат по окончании</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-bold text-xl">2 500 ₽</span>
+                                        <span class="text-gray-500 text-sm">/месяц</span>
+                                    </div>
+                                    <a href="/courses/quran-basics" 
+                                       class="bg-primary text-white px-4 py-2 rounded-full hover:bg-accent transition text-sm font-medium">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-accent p-6 flex flex-col justify-center items-center">
+                                <i class="fas fa-medal text-white text-4xl mb-4"></i>
+                                <span class="text-white font-bold text-lg">Продвинутый</span>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="font-heading font-bold text-xl">Углубленный таджвид</h3>
+                                    <div class="flex space-x-2">
+                                        <span class="badge-online text-white text-xs px-3 py-1 rounded-full">
+                                            Онлайн
+                                        </span>
+                                        <span class="badge-offline text-white text-xs px-3 py-1 rounded-full">
+                                            Очно
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-4">
+                                    Углубленное изучение правил таджвида, махрадж букв, правила удлинения.
+                                </p>
+                                
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-clock text-accent mr-2"></i>
+                                        <span>48 занятий (6 месяцев)</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-users text-accent mr-2"></i>
+                                        <span>Группы 3-6 человек</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-certificate text-accent mr-2"></i>
+                                        <span>Диплом по окончании</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-accent font-bold text-xl">3 500 ₽</span>
+                                        <span class="text-gray-500 text-sm">/месяц</span>
+                                    </div>
+                                    <a href="/courses/advanced-tajweed" 
+                                       class="bg-accent text-white px-4 py-2 rounded-full hover:bg-primary transition text-sm font-medium">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Arabic Courses -->
+            <div id="arabic-courses" class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-language text-white"></i>
+                    </div>
+                    <h2 class="font-heading font-bold text-3xl text-accent">
+                        Курсы арабского языка
+                    </h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Course 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-primary p-6 flex flex-col justify-center items-center">
+                                <i class="fas fa-font text-white text-4xl mb-4"></i>
+                                <span class="text-white font-bold text-lg">Начальный</span>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="font-heading font-bold text-xl">Арабский алфавит</h3>
+                                    <div class="flex space-x-2">
+                                        <span class="badge-online text-white text-xs px-3 py-1 rounded-full">
+                                            Онлайн
+                                        </span>
+                                        <span class="badge-offline text-white text-xs px-3 py-1 rounded-full">
+                                            Очно
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-4">
+                                    Изучение арабского алфавита, правил соединения букв, базовое чтение и письмо.
+                                </p>
+                                
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-clock text-primary mr-2"></i>
+                                        <span>20 занятий (2.5 месяца)</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-users text-primary mr-2"></i>
+                                        <span>Группы 5-10 человек</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-book text-primary mr-2"></i>
+                                        <span>Учебное пособие в подарок</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-bold text-xl">2 800 ₽</span>
+                                        <span class="text-gray-500 text-sm">/месяц</span>
+                                    </div>
+                                    <a href="/courses/arabic-alphabet" 
+                                       class="bg-primary text-white px-4 py-2 rounded-full hover:bg-accent transition text-sm font-medium">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course 4 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-accent p-6 flex flex-col justify-center items-center">
+                                <i class="fas fa-comments text-white text-4xl mb-4"></i>
+                                <span class="text-white font-bold text-lg">Разговорный</span>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="font-heading font-bold text-xl">Арабский для общения</h3>
+                                    <div class="flex space-x-2">
+                                        <span class="badge-online text-white text-xs px-3 py-1 rounded-full">
+                                            Онлайн
+                                        </span>
+                                        <span class="badge-offline text-white text-xs px-3 py-1 rounded-full">
+                                            Очно
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-4">
+                                    Разговорный арабский язык, основы грамматики, диалоги, аудирование.
+                                </p>
+                                
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-clock text-accent mr-2"></i>
+                                        <span>36 занятий (4.5 месяца)</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-users text-accent mr-2"></i>
+                                        <span>Группы 4-8 человек</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-headphones text-accent mr-2"></i>
+                                        <span>Аудиоматериалы включены</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-accent font-bold text-xl">3 200 ₽</span>
+                                        <span class="text-gray-500 text-sm">/месяц</span>
+                                    </div>
+                                    <a href="/courses/arabic-conversation" 
+                                       class="bg-accent text-white px-4 py-2 rounded-full hover:bg-primary transition text-sm font-medium">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kids Courses -->
+            <div id="kids-courses">
+                <div class="flex items-center mb-8">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-child text-white"></i>
+                    </div>
+                    <h2 class="font-heading font-bold text-3xl text-primary">
+                        Курсы для детей
+                    </h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Course 5 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-primary p-6 flex flex-col justify-center items-center">
+                                <i class="fas fa-baby text-white text-4xl mb-4"></i>
+                                <span class="text-white font-bold text-lg">5-7 лет</span>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="font-heading font-bold text-xl">Коран для малышей</h3>
+                                    <div class="flex space-x-2">
+                                        <span class="badge-kids text-white text-xs px-3 py-1 rounded-full">
+                                            Игровое
+                                        </span>
+                                        <span class="badge-offline text-white text-xs px-3 py-1 rounded-full">
+                                            Только очно
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-4">
+                                    Игровое обучение основам ислама, арабскому алфавиту, коротким сурам.
+                                </p>
+                                
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-clock text-primary mr-2"></i>
+                                        <span>16 занятий (2 месяца)</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-users text-primary mr-2"></i>
+                                        <span>Группы 4-6 детей</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-gamepad text-primary mr-2"></i>
+                                        <span>Игровая методика</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-primary font-bold text-xl">2 000 ₽</span>
+                                        <span class="text-gray-500 text-sm">/месяц</span>
+                                    </div>
+                                    <a href="/courses/kids-basic" 
+                                       class="bg-primary text-white px-4 py-2 rounded-full hover:bg-accent transition text-sm font-medium">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course 6 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                        <div class="md:flex">
+                            <div class="md:w-1/3 bg-accent p-6 flex flex-col justify-center items-center">
+                                <i class="fas fa-user-graduate text-white text-4xl mb-4"></i>
+                                <span class="text-white font-bold text-lg">8-15 лет</span>
+                            </div>
+                            <div class="md:w-2/3 p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="font-heading font-bold text-xl">Детский таджвид</h3>
+                                    <div class="flex space-x-2">
+                                        <span class="badge-online text-white text-xs px-3 py-1 rounded-full">
+                                            Онлайн
+                                        </span>
+                                        <span class="badge-offline text-white text-xs px-3 py-1 rounded-full">
+                                            Очно
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-4">
+                                    Полный курс чтения Корана с таджвидом для школьников, адаптированная программа.
+                                </p>
+                                
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-clock text-accent mr-2"></i>
+                                        <span>32 занятия (4 месяца)</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-users text-accent mr-2"></i>
+                                        <span>Группы 5-8 детей</span>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <i class="fas fa-certificate text-accent mr-2"></i>
+                                        <span>Детский диплом</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-accent font-bold text-xl">2 500 ₽</span>
+                                        <span class="text-gray-500 text-sm">/месяц</span>
+                                    </div>
+                                    <a href="/courses/kids-tajweed" 
+                                       class="bg-accent text-white px-4 py-2 rounded-full hover:bg-primary transition text-sm font-medium">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Format Comparison -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Форматы обучения
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Выберите наиболее удобный для вас способ обучения
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Online Learning -->
+                <div class="bg-secondary p-8 rounded-2xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-laptop-house text-white text-3xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-primary">Онлайн обучение</h3>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Занятия из любой точки мира</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Гибкий график занятий</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Записи уроков доступны 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Интерактивные материалы</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-center">
+                        <span class="text-gray-600 text-sm">Требуется:</span>
+                        <p class="text-gray-700">Стабильный интернет, компьютер/планфон, наушники</p>
+                    </div>
+                </div>
+                
+                <!-- Offline Learning -->
+                <div class="bg-secondary p-8 rounded-2xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-school text-white text-3xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-primary">Очное обучение</h3>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span>Личное общение с преподавателем</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span>Атмосфера медресе</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span>Работа в группе единомышленников</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span>Библиотека медресе в доступе</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-center">
+                        <span class="text-gray-600 text-sm">Адрес:</span>
+                        <p class="text-gray-700">г. Курчалой, ул. Кадырова 51</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment CTA -->
+    <section class="py-16" style="background: linear-gradient(135deg, #755139 0%, #8B4513 100%);">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">
+                    Не можете выбрать курс?
+                </h2>
+                <p class="text-xl mb-8 text-gray-100">
+                    Запишитесь на бесплатную консультацию и мы поможем подобрать оптимальную программу обучения
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/enroll" 
+                       class="bg-white text-primary font-bold px-8 py-3 rounded-full hover:bg-secondary transition shadow-lg">
+                        <i class="fas fa-calendar-alt mr-2"></i>Записаться на консультацию
+                    </a>
+                    <a href="tel:+79899033485" 
+                       class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white/20 transition">
+                        <i class="fas fa-phone mr-2"></i>Позвонить для консультации
+                    </a>
+                </div>
+                
+                <p class="mt-8 text-gray-200 text-sm">
+                    ⏰ Консультации проводятся ежедневно с 09:00 до 22:00
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Частые вопросы о курсах
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Ответы на самые популярные вопросы об обучении
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow">
+                    <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                        <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                        <span>Можно ли начать обучение с нуля?</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        Да, большинство наших курсов рассчитаны на начинающих. Мы обучаем с самых основ: арабского алфавита и правил чтения.
+                    </p>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow">
+                    <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                        <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                        <span>Как проходит онлайн обучение?</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        Занятия проходят через Zoom. Вы видите преподавателя, учебные материалы и общаетесь в реальном времени.
+                    </p>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow">
+                    <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                        <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                        <span>Выдаете ли вы диплом?</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        Да, по окончании полного курса выдается диплом установленного образца медресе Al-Huda.
+                    </p>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow">
+                    <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                        <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                        <span>Можно ли сменить формат обучения?</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        Да, при необходимости можно перейти с онлайн на очное обучение или наоборот, сохранив прогресс.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="/faq" class="text-primary font-medium hover:text-accent transition">
+                    <i class="fas fa-arrow-right mr-2"></i>Смотреть все вопросы
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        // Smooth scroll for category links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

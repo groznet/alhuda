@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности - Al-Huda Медресе</title>
+    <meta name="description" content="Политика конфиденциальности медресе Al-Huda. Информация о сборе, использовании и защите персональных данных.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .privacy-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.95) 0%, rgba(139, 69, 19, 0.85) 100%);
+        }
+        .content-section {
+            transition: all 0.3s ease;
+        }
+        .content-section:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        .toc-item {
+            transition: all 0.2s ease;
+        }
+        .toc-item:hover {
+            background-color: #F2EDD7;
+            padding-left: 1.5rem;
+        }
+        .highlight-box {
+            border-left: 4px solid #755139;
+            background: linear-gradient(to right, #F2EDD7, white);
+        }
+        .definition-term {
+            color: #755139;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Page Header -->
+    <section class="relative py-20 privacy-gradient">
+        <div class="absolute inset-0">
+            <img src="/assets/images/breadcrumb.jpg" 
+                 alt="Конфиденциальность и безопасность" 
+                 class="w-full h-full object-cover opacity-10">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                    Политика конфиденциальности
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Защита ваших персональных данных — наш приоритет
+                </p>
+                
+                <!-- Breadcrumb -->
+                <div class="flex justify-center items-center space-x-2 text-sm">
+                    <a href="/" class="hover:text-secondary">Главная</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-secondary">Политика конфиденциальности</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Navigation -->
+    <section class="py-8 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-sm text-gray-600 flex items-center justify-between flex-wrap gap-2">
+                    <span class="font-medium">Содержание:</span>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#general" class="text-primary hover:text-accent transition text-sm">
+                            <i class="fas fa-file-alt mr-1"></i>Общие положения
+                        </a>
+                        <a href="#data-collection" class="text-primary hover:text-accent transition text-sm">
+                            <i class="fas fa-database mr-1"></i>Сбор данных
+                        </a>
+                        <a href="#data-use" class="text-primary hover:text-accent transition text-sm">
+                            <i class="fas fa-cogs mr-1"></i>Использование
+                        </a>
+                        <a href="#data-protection" class="text-primary hover:text-accent transition text-sm">
+                            <i class="fas fa-shield-alt mr-1"></i>Защита
+                        </a>
+                        <a href="#rights" class="text-primary hover:text-accent transition text-sm">
+                            <i class="fas fa-user-check mr-1"></i>Ваши права
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Introduction -->
+                <div class="mb-12 text-center">
+                    <p class="text-gray-700 text-lg mb-6">
+                        Настоящая Политика конфиденциальности персональных данных (далее — Политика конфиденциальности) 
+                        действует в отношении всей информации, которую медресе «Al-Huda» может получить о Пользователе 
+                        во время использования сайта, программ и продуктов.
+                    </p>
+                    <div class="highlight-box p-6 rounded-xl">
+                        <p class="text-gray-700">
+                            <i class="fas fa-info-circle text-primary mr-2"></i>
+                            <strong>Дата последнего обновления:</strong> 20 декабря 2024 года
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Table of Contents -->
+                <div class="bg-secondary p-6 rounded-2xl mb-12">
+                    <h3 class="font-heading font-bold text-xl text-primary mb-4">
+                        <i class="fas fa-list-ol mr-2"></i>Быстрая навигация
+                    </h3>
+                    <nav class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <a href="#general" class="toc-item p-3 rounded-lg flex items-start">
+                            <span class="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                            <span>Общие положения и термины</span>
+                        </a>
+                        <a href="#data-collection" class="toc-item p-3 rounded-lg flex items-start">
+                            <span class="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                            <span>Какие данные мы собираем</span>
+                        </a>
+                        <a href="#data-use" class="toc-item p-3 rounded-lg flex items-start">
+                            <span class="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                            <span>Цели сбора данных</span>
+                        </a>
+                        <a href="#cookies" class="toc-item p-3 rounded-lg flex items-start">
+                            <span class="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                            <span>Использование cookies</span>
+                        </a>
+                        <a href="#data-protection" class="toc-item p-3 rounded-lg flex items-start">
+                            <span class="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">5</span>
+                            <span>Защита данных</span>
+                        </a>
+                        <a href="#data-sharing" class="toc-item p-3 rounded-lg flex items-start">
+                            <span class="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">6</span>
+                            <span>Передача данных третьим лицам</span>
+                        </a>
+                        <a href="#rights" class="toc-item p-3 rounded-lg flex items-start">
+                            <span class="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">7</span>
+                            <span>Ваши права</span>
+                        </a>
+                        <a href="#changes" class="toc-item p-3 rounded-lg flex items-start">
+                            <span class="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">8</span>
+                            <span>Изменение политики</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Section 1: General Provisions -->
+                <section id="general" class="content-section bg-white p-8 rounded-2xl shadow-sm mb-12">
+                    <div class="flex items-center mb-6 pb-4 border-b border-gray-200">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-primary">
+                            Общие положения
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p>
+                            <span class="definition-term">1.1.</span> Настоящая Политика конфиденциальности определяет порядок обработки и защиты 
+                            медресе «Al-Huda» (далее — Оператор) информации о Пользователях, которую Оператор может получить 
+                            при использовании Пользователем сайта <a href="https://al-huda.ru" class="text-primary hover:underline">al-huda.ru</a> 
+                            (далее — Сайт) и его сервисов.
+                        </p>
+                        
+                        <p>
+                            <span class="definition-term">1.2.</span> Использование Сайта означает безоговорочное согласие Пользователя с настоящей 
+                            Политикой конфиденциальности и указанными в ней условиями обработки его персональной информации.
+                        </p>
+                        
+                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="font-heading font-bold text-lg text-gray-800 mb-3">
+                                <i class="fas fa-book mr-2"></i>Основные термины
+                            </h4>
+                            <dl class="space-y-3">
+                                <div>
+                                    <dt class="definition-term">Персональные данные</dt>
+                                    <dd class="text-gray-700 text-sm ml-4">Любая информация, относящаяся к прямо или косвенно определенному 
+                                    или определяемому физическому лицу (субъекту персональных данных).</dd>
+                                </div>
+                                <div>
+                                    <dt class="definition-term">Обработка персональных данных</dt>
+                                    <dd class="text-gray-700 text-sm ml-4">Любое действие (операция) или совокупность действий (операций), 
+                                    совершаемых с использованием средств автоматизации или без использования таких средств с персональными 
+                                    данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), 
+                                    извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, 
+                                    удаление, уничтожение персональных данных.</dd>
+                                </div>
+                                <div>
+                                    <dt class="definition-term">Конфиденциальность персональных данных</dt>
+                                    <dd class="text-gray-700 text-sm ml-4">Обязательное для соблюдения Оператором требование не допускать 
+                                    их распространения без согласия субъекта персональных данных или наличия иного законного основания.</dd>
+                                </div>
+                                <div>
+                                    <dt class="definition-term">Пользователь Сайта (далее Пользователь)</dt>
+                                    <dd class="text-gray-700 text-sm ml-4">Лицо, имеющее доступ к Сайту, посредством сети Интернет и 
+                                    использующее Сайт.</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        
+                        <p>
+                            <span class="definition-term">1.3.</span> Настоящая Политика конфиденциальности применяется только к Сайту 
+                            «Al-Huda Медресе». Оператор не контролирует и не несет ответственность за сайты третьих лиц, на которые 
+                            Пользователь может перейти по ссылкам, доступным на Сайте.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 2: Data Collection -->
+                <section id="data-collection" class="content-section bg-white p-8 rounded-2xl shadow-sm mb-12">
+                    <div class="flex items-center mb-6 pb-4 border-b border-gray-200">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-primary">
+                            Какие персональные данные мы собираем
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p>
+                            <span class="definition-term">2.1.</span> Оператор может собирать следующие персональные данные Пользователя:
+                        </p>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full border border-gray-300">
+                                <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th class="py-3 px-4 text-left">Категория данных</th>
+                                        <th class="py-3 px-4 text-left">Примеры данных</th>
+                                        <th class="py-3 px-4 text-left">Когда собираем</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 border-r">
+                                            <strong>Идентификационные данные</strong>
+                                        </td>
+                                        <td class="py-3 px-4 border-r">
+                                            Фамилия, имя, отчество
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            При заполнении форм на сайте
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 border-r">
+                                            <strong>Контактные данные</strong>
+                                        </td>
+                                        <td class="py-3 px-4 border-r">
+                                            Номер телефона, email адрес
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            При регистрации на курсы, подписке на рассылку
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 border-r">
+                                            <strong>Демографические данные</strong>
+                                        </td>
+                                        <td class="py-3 px-4 border-r">
+                                            Возраст, пол, город проживания
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            При записи на детские курсы, заполнении анкет
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 border-r">
+                                            <strong>Учебные данные</strong>
+                                        </td>
+                                        <td class="py-3 px-4 border-r">
+                                            Уровень подготовки, выбранный курс, прогресс обучения
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            В процессе обучения и консультаций
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 border-r">
+                                            <strong>Технические данные</strong>
+                                        </td>
+                                        <td class="py-3 px-4 border-r">
+                                            IP-адрес, данные cookies, информация о браузере
+                                        </td>
+                                        <td class="py-3 px-4">
+                                            Автоматически при посещении сайта
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <p>
+                            <span class="definition-term">2.2.</span> Оператор также может обрабатывать обезличенные данные о Пользователе 
+                            (в т.ч. файлы «cookies») с помощью сервисов интернет-статистики (Яндекс.Метрика, Google Analytics и других).
+                        </p>
+                        
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        <strong>Важно:</strong> Мы не собираем специальные категории персональных данных (раса, национальность, 
+                                        политические взгляды, религиозные или философские убеждения, состояние здоровья, интимная жизнь), 
+                                        за исключением случаев, когда это предусмотрено законодательством РФ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Data Use -->
+                <section id="data-use" class="content-section bg-white p-8 rounded-2xl shadow-sm mb-12">
+                    <div class="flex items-center mb-6 pb-4 border-b border-gray-200">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-primary">
+                            Цели сбора и обработки персональных данных
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p>
+                            <span class="definition-term">3.1.</span> Персональные данные Пользователя Оператор обрабатывает в следующих целях:
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="border border-gray-200 rounded-xl p-5 hover:border-primary transition">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-user-graduate text-white"></i>
+                                </div>
+                                <h4 class="font-heading font-bold text-lg mb-2">Образовательные услуги</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• Регистрация на курсы</li>
+                                    <li>• Организация учебного процесса</li>
+                                    <li>• Контроль успеваемости</li>
+                                    <li>• Выдача документов об обучении</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-xl p-5 hover:border-primary transition">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-comments text-white"></i>
+                                </div>
+                                <h4 class="font-heading font-bold text-lg mb-2">Коммуникация</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• Ответы на вопросы</li>
+                                    <li>• Отправка уведомлений</li>
+                                    <li>• Информирование об изменениях</li>
+                                    <li>• Консультационная поддержка</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-xl p-5 hover:border-primary transition">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-chart-line text-white"></i>
+                                </div>
+                                <h4 class="font-heading font-bold text-lg mb-2">Аналитика и улучшения</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• Анализ посещаемости сайта</li>
+                                    <li>• Улучшение качества услуг</li>
+                                    <li>• Разработка новых курсов</li>
+                                    <li>• Персонализация контента</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-xl p-5 hover:border-primary transition">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-gavel text-white"></i>
+                                </div>
+                                <h4 class="font-heading font-bold text-lg mb-2">Юридические обязательства</h4>
+                                <ul class="text-gray-700 text-sm space-y-1">
+                                    <li>• Исполнение договоров</li>
+                                    <li>• Соблюдение законодательства</li>
+                                    <li>• Защита законных интересов</li>
+                                    <li>• Налоговый учет</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            <span class="definition-term">3.2.</span> Обработка персональных данных осуществляется на законной и справедливой 
+                            основе, ограничивается достижением конкретных, заранее определенных и законных целей.
+                        </p>
+                        
+                        <p>
+                            <span class="definition-term">3.3.</span> Оператор обеспечивает соответствие содержания и объема обрабатываемых 
+                            персональных данных заявленным целям обработки.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 4: Cookies -->
+                <section id="cookies" class="content-section bg-white p-8 rounded-2xl shadow-sm mb-12">
+                    <div class="flex items-center mb-6 pb-4 border-b border-gray-200">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">4</span>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-primary">
+                            Использование файлов cookies
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p>
+                            <span class="definition-term">4.1.</span> На Сайте используются файлы «cookies» и аналогичные технологии для 
+                            улучшения работы Сайта, персонализации контента и рекламы, предоставления функций социальных сетей и анализа 
+                            нашего трафика.
+                        </p>
+                        
+                        <div class="bg-gray-50 p-5 rounded-xl">
+                            <h4 class="font-heading font-bold text-lg text-gray-800 mb-3">
+                                <i class="fas fa-cookie-bite mr-2"></i>Типы используемых cookies:
+                            </h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-bold text-gray-700 mb-1">Строго необходимые cookies</h5>
+                                    <p class="text-gray-600 text-sm">Эти файлы cookies необходимы для работы Сайта и не могут быть отключены.</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-700 mb-1">Аналитические cookies</h5>
+                                    <p class="text-gray-600 text-sm">Позволяют нам подсчитывать количество посещений и источники трафика, 
+                                    чтобы мы могли измерять и улучшать производительность нашего Сайта.</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-700 mb-1">Функциональные cookies</h5>
+                                    <p class="text-gray-600 text-sm">Используются для запоминания выбранных вами настроек (язык, регион).</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            <span class="definition-term">4.2.</span> Пользователь может в любой момент изменить настройки своего браузера, 
+                            чтобы отключить cookies или получать уведомления об их отправке. Однако, в случае отключения cookies некоторые 
+                            функции Сайта могут работать некорректно.
+                        </p>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-info-circle text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        <strong>Как управлять cookies:</strong> Вы можете управлять файлами cookies через настройки своего 
+                                        браузера. Инструкции для популярных браузеров: 
+                                        <a href="https://support.google.com/chrome/answer/95647" class="text-primary hover:underline">Chrome</a>, 
+                                        <a href="https://support.mozilla.org/ru/kb/kuki-informaciya-kotoruyu-veb-sajty-hranyat-na-vas" class="text-primary hover:underline">Firefox</a>, 
+                                        <a href="https://support.apple.com/ru-ru/guide/safari/sfri11471/mac" class="text-primary hover:underline">Safari</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 5: Data Protection -->
+                <section id="data-protection" class="content-section bg-white p-8 rounded-2xl shadow-sm mb-12">
+                    <div class="flex items-center mb-6 pb-4 border-b border-gray-200">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">5</span>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-primary">
+                            Защита персональных данных
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p>
+                            <span class="definition-term">5.1.</span> Оператор предпринимает необходимые организационные и технические меры 
+                            для защиты персональных данных Пользователя от неправомерного или случайного доступа, уничтожения, изменения, 
+                            блокирования, копирования, распространения, а также от иных неправомерных действий третьих лиц.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-green-200 bg-green-50 rounded-xl p-5">
+                                <h4 class="font-heading font-bold text-lg text-green-800 mb-3 flex items-center">
+                                    <i class="fas fa-shield-alt mr-2"></i>Технические меры защиты
+                                </h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span class="text-sm">Шифрование данных при передаче (SSL/TLS)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span class="text-sm">Регулярное обновление программного обеспечения</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span class="text-sm">Антивирусная защита серверов</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span class="text-sm">Резервное копирование данных</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="border border-blue-200 bg-blue-50 rounded-xl p-5">
+                                <h4 class="font-heading font-bold text-lg text-blue-800 mb-3 flex items-center">
+                                    <i class="fas fa-users-cog mr-2"></i>Организационные меры
+                                </h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span class="text-sm">Ограничение доступа сотрудников к данным</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span class="text-sm">Подписание соглашений о конфиденциальности</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span class="text-sm">Регулярное обучение сотрудников</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span class="text-sm">Политика уничтожения устаревших данных</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            <span class="definition-term">5.2.</span> Срок хранения персональных данных определяется в соответствии с 
+                            целями их обработки и требованиями законодательства РФ. По достижении целей обработки или в случае утраты 
+                            необходимости в достижении этих целей персональные данные подлежат уничтожению.
+                        </p>
+                        
+                        <div class="bg-gray-100 p-5 rounded-xl">
+                            <h4 class="font-heading font-bold text-lg text-gray-800 mb-2">
+                                Сроки хранения данных
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center border-b border-gray-300 pb-2">
+                                    <span class="text-gray-700">Данные о запросах и обращениях</span>
+                                    <span class="font-bold text-primary">3 года</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-300 pb-2">
+                                    <span class="text-gray-700">Данные об обучении и договорах</span>
+                                    <span class="font-bold text-primary">5 лет</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-700">Налоговая и бухгалтерская документация</span>
+                                    <span class="font-bold text-primary">Согласно НК РФ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 6: Data Sharing -->
+                <section id="data-sharing" class="content-section bg-white p-8 rounded-2xl shadow-sm mb-12">
+                    <div class="flex items-center mb-6 pb-4 border-b border-gray-200">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">6</span>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-primary">
+                            Передача персональных данных третьим лицам
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p>
+                            <span class="definition-term">6.1.</span> Оператор не продает, не обменивает и не передает персональные данные 
+                            Пользователя третьим лицам без согласия Пользователя, за исключением следующих случаев:
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <span class="text-white font-bold text-sm">A</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">По требованию государственных органов</p>
+                                    <p class="text-gray-600 text-sm">В случаях, предусмотренных законодательством Российской Федерации.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <span class="text-white font-bold text-sm">B</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Для исполнения договорных обязательств</p>
+                                    <p class="text-gray-600 text-sm">Передача данных платежным системам, курьерским службам, хостинг-провайдерам.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <span class="text-white font-bold text-sm">C</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">С согласия Пользователя</p>
+                                    <p class="text-gray-600 text-sm">При явном согласии Пользователя на передачу данных конкретному третьему лицу.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            <span class="definition-term">6.2.</span> При передаче персональных данных третьим лицам Оператор требует от 
+                            таких лиц соблюдения конфиденциальности и обеспечения безопасности передаваемых данных.
+                        </p>
+                        
+                        <div class="bg-yellow-50 p-5 rounded-xl border border-yellow-200">
+                            <h4 class="font-heading font-bold text-lg text-yellow-800 mb-3">
+                                <i class="fas fa-globe-americas mr-2"></i>Международная передача данных
+                            </h4>
+                            <p class="text-yellow-700 text-sm">
+                                Мы не осуществляем трансграничную передачу персональных данных за пределы Российской Федерации, 
+                                за исключением случаев, когда это необходимо для исполнения договора с Пользователем или с его согласия.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 7: User Rights -->
+                <section id="rights" class="content-section bg-white p-8 rounded-2xl shadow-sm mb-12">
+                    <div class="flex items-center mb-6 pb-4 border-b border-gray-200">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">7</span>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-primary">
+                            Права субъектов персональных данных
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p>
+                            <span class="definition-term">7.1.</span> Пользователь имеет право на получение информации, касающейся обработки 
+                            его персональных данных, а также осуществление следующих прав:
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="border border-gray-200 rounded-xl p-5">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-eye text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-heading font-bold">Право доступа</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">
+                                    Получать подтверждение обработки ваших данных и доступ к ним.
+                                </p>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-xl p-5">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-edit text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-heading font-bold">Право на исправление</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">
+                                    Требовать исправления неточных или неполных персональных данных.
+                                </p>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-xl p-5">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-trash-alt text-red-600"></i>
+                                    </div>
+                                    <h4 class="font-heading font-bold">Право на удаление</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">
+                                    Требовать удаления ваших данных при наличии оснований.
+                                </p>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-xl p-5">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-ban text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-heading font-bold">Право на ограничение</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">
+                                    Требовать ограничения обработки ваших данных.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-5 rounded-xl">
+                            <h4 class="font-heading font-bold text-lg text-gray-800 mb-3">
+                                <i class="fas fa-envelope mr-2"></i>Как реализовать свои права
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Для реализации своих прав вы можете направить запрос:
+                            </p>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-envelope text-primary mt-1 mr-2"></i>
+                                    <span>На email: <a href="mailto:info@al-huda.ru" class="text-primary hover:underline">info@al-huda.ru</a></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-phone text-primary mt-1 mr-2"></i>
+                                    <span>По телефону: <a href="tel:+79899033485" class="text-primary hover:underline">+7 (989) 903-34-85</a></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-primary mt-1 mr-2"></i>
+                                    <span>По адресу: г. Курчалой, ул. Кадырова 51, 366319</span>
+                                </li>
+                            </ul>
+                            <p class="text-gray-600 text-sm mt-3">
+                                Мы рассмотрим ваш запрос в течение 30 дней с момента получения.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded-r">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-exclamation-circle text-red-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-red-700">
+                                        <strong>Право на обращение в Роскомнадзор:</strong> Если вы считаете, что ваши права нарушены, 
+                                        вы имеете право обратиться в уполномоченный орган по защите прав субъектов персональных данных — 
+                                        Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 8: Policy Changes -->
+                <section id="changes" class="content-section bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="flex items-center mb-6 pb-4 border-b border-gray-200">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">8</span>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-primary">
+                            Изменения в Политике конфиденциальности
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p>
+                            <span class="definition-term">8.1.</span> Оператор имеет право вносить изменения в настоящую Политику 
+                            конфиденциальности. При внесении изменений в актуальной редакции указывается дата последнего обновления. 
+                            Новая редакция Политики вступает в силу с момента ее размещения на Сайте.
+                        </p>
+                        
+                        <p>
+                            <span class="definition-term">8.2.</span> Рекомендуем Пользователям регулярно проверять эту страницу для 
+                            ознакомления с любыми изменениями в нашей Политике конфиденциальности.
+                        </p>
+                        
+                        <div class="bg-blue-50 p-5 rounded-xl">
+                            <h4 class="font-heading font-bold text-lg text-blue-800 mb-3">
+                                <i class="fas fa-bell mr-2"></i>Уведомление об изменениях
+                            </h4>
+                            <p class="text-blue-700 text-sm">
+                                В случае существенных изменений мы уведомим вас путем размещения заметного объявления на нашем Сайте 
+                                или отправим уведомление на указанный вами email.
+                            </p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-xl p-6 text-center">
+                            <h4 class="font-heading font-bold text-xl text-primary mb-3">
+                                Контактная информация
+                            </h4>
+                            <p class="text-gray-700 mb-4">
+                                Если у вас есть вопросы относительно нашей Политики конфиденциальности, пожалуйста, свяжитесь с нами:
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="mailto:info@al-huda.ru" 
+                                   class="bg-primary text-white px-6 py-3 rounded-full hover:bg-accent transition inline-flex items-center justify-center">
+                                    <i class="fas fa-envelope mr-2"></i> info@al-huda.ru
+                                </a>
+                                <a href="tel:+79899033485" 
+                                   class="border-2 border-primary text-primary px-6 py-3 rounded-full hover:bg-secondary transition inline-flex items-center justify-center">
+                                    <i class="fas fa-phone mr-2"></i> +7 (989) 903-34-85
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Acceptance -->
+                <div class="mt-12 p-6 bg-secondary rounded-2xl text-center">
+                    <h3 class="font-heading font-bold text-xl text-primary mb-4">
+                        <i class="fas fa-check-circle mr-2"></i>Принятие условий
+                    </h3>
+                    <p class="text-gray-700">
+                        Используя наш Сайт и услуги, вы подтверждаете, что прочитали, поняли и соглашаетесь с условиями 
+                        настоящей Политики конфиденциальности.
+                    </p>
+                    <p class="text-gray-600 text-sm mt-3">
+                        Политика конфиденциальности вступает в силу с момента ее размещения на Сайте.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Smooth scrolling for anchor links -->
+    <script>
+        // Smooth scrolling for table of contents links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL hash without scrolling
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+        
+        // Highlight current section in TOC on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    // Update active link in TOC
+                    document.querySelectorAll('.toc-item').forEach(item => {
+                        item.classList.remove('bg-primary', 'text-white');
+                    });
+                    
+                    const activeLink = document.querySelector(`.toc-item[href="#${sectionId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('bg-primary', 'text-white');
+                    }
+                }
+            });
+        });
+        
+        // Print policy button functionality
+        function printPolicy() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

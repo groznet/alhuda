@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Al-Huda Медресе | Связаться со школой Корана в Курчалое</title>
+    <meta name="description" content="Контактная информация медресе Al-Huda в Курчалое. Телефон, WhatsApp, адрес, форма обратной связи. Работаем с 09:00 до 22:00.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .contact-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.95) 0%, rgba(139, 69, 19, 0.85) 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        .input-focus:focus {
+            border-color: #755139;
+            box-shadow: 0 0 0 3px rgba(117, 81, 57, 0.1);
+        }
+        .map-placeholder {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Page Header -->
+    <section class="relative py-20 contact-gradient">
+        <div class="absolute inset-0">
+            <img src="/assets/images/breadcrumb.jpg" 
+                 alt="Контактная информация" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                    Свяжитесь с нами
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Есть вопросы о курсах или хотите записаться на обучение? Мы всегда на связи!
+                </p>
+                
+                <!-- Breadcrumb -->
+                <div class="flex justify-center items-center space-x-2 text-sm">
+                    <a href="/" class="hover:text-secondary">Главная</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-secondary">Контакты</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info & Form -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left Column: Contact Information -->
+                <div>
+                    <h2 class="font-heading font-bold text-3xl text-primary mb-8">
+                        Контактная информация
+                    </h2>
+                    
+                    <!-- Contact Cards -->
+                    <div class="space-y-6 mb-8">
+                        <!-- Phone -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg hover-scale">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-lg mb-2">Телефон и WhatsApp</h3>
+                                    <p class="text-gray-700 mb-2">
+                                        Основной номер для связи, консультаций и записи на курсы
+                                    </p>
+                                    <a href="tel:+79899033485" 
+                                       class="text-primary font-bold text-xl hover:text-accent transition block mb-2">
+                                        +7 (989) 903-34-85
+                                    </a>
+                                    <div class="flex space-x-3 mt-3">
+                                        <a href="https://wa.me/+79899033485" 
+                                           target="_blank"
+                                           class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition text-sm">
+                                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                                        </a>
+                                        <a href="tel:+79899033485" 
+                                           class="inline-flex items-center bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition text-sm">
+                                            <i class="fas fa-phone mr-2"></i> Позвонить
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg hover-scale">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-lg mb-2">Адрес медресе</h3>
+                                    <p class="text-gray-700 mb-2">
+                                        Приходите к нам на занятия или на бесплатную консультацию
+                                    </p>
+                                    <p class="text-gray-800 font-medium">
+                                        <i class="fas fa-map-pin text-primary mr-2"></i>
+                                        г. Курчалой, Чеченская Республика
+                                    </p>
+                                    <p class="text-gray-600">
+                                        ул. Кадырова 51, 366319
+                                    </p>
+                                    <div class="mt-3">
+                                        <a href="https://maps.google.com/?q=Курчалой+ул.+Кадырова+51" 
+                                           target="_blank"
+                                           class="inline-flex items-center text-primary hover:text-accent transition text-sm font-medium">
+                                            <i class="fas fa-directions mr-2"></i> Построить маршрут
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email & Social -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg hover-scale">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-lg mb-2">Email и соцсети</h3>
+                                    <p class="text-gray-700 mb-2">
+                                        Напишите нам на email или подпишитесь в социальных сетях
+                                    </p>
+                                    <a href="mailto:info@al-huda.ru" 
+                                       class="text-primary font-medium hover:text-accent transition block mb-3">
+                                        <i class="fas fa-envelope mr-2"></i> info@al-huda.ru
+                                    </a>
+                                    <div class="flex space-x-3">
+                                        <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                            <i class="fab fa-vk"></i>
+                                        </a>
+                                        <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                        <a href="https://t.me/al-huda.ru" 
+                                           target="_blank"
+                                           class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                            <i class="fab fa-telegram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Working Hours -->
+                    <div class="bg-secondary p-6 rounded-2xl">
+                        <h3 class="font-heading font-bold text-xl text-primary mb-4">
+                            <i class="fas fa-clock mr-2"></i> Часы работы
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center pb-2 border-b border-gray-300">
+                                <span class="font-medium">Понедельник - Пятница</span>
+                                <span class="font-bold text-primary">09:00 – 22:00</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-gray-300">
+                                <span class="font-medium">Суббота</span>
+                                <span class="font-bold text-primary">09:00 – 20:00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium">Воскресенье</span>
+                                <span class="font-bold text-primary">10:00 – 18:00</span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 text-sm">
+                            * Консультации и запись на курсы доступны в течение всего рабочего дня
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h2 class="font-heading font-bold text-3xl text-primary mb-2">
+                            Форма обратной связи
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            Заполните форму, и мы свяжемся с вами в течение 2 часов в рабочее время
+                        </p>
+                        
+                        <form id="contactForm" class="space-y-6">
+                            <!-- Name -->
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">
+                                    Ваше имя *
+                                </label>
+                                <!-- <input type="text" 
+                                       id="name" 
+                                       name="name"
+                                       required
+                                       class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition"
+                                       placeholder="Иван Иванов"> -->
+                            </div>
+
+                            <!-- Phone -->
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">
+                                    Телефон *
+                                </label>
+                                <!-- <input type="tel" 
+                                       id="phone" 
+                                       name="phone"
+                                       required
+                                       class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition"
+                                       placeholder="+7 (999) 123-45-67"> -->
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">
+                                    Email
+                                </label>
+                                <!-- <input type="email" 
+                                       id="email" 
+                                       name="email"
+                                       class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition"
+                                       placeholder="example@mail.ru"> -->
+                            </div>
+
+                            <!-- Course Selection -->
+                            <div>
+                                <label for="course" class="block text-gray-700 font-medium mb-2">
+                                    Интересующий курс
+                                </label>
+                                <!-- <select id="course" 
+                                        name="course"
+                                        class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition bg-white">
+                                    <option value="">Выберите курс</option>
+                                    <option value="quran">Коран с таджвидом</option>
+                                    <option value="arabic">Арабский язык</option>
+                                    <option value="kids">Детские группы</option>
+                                    <option value="consult">Консультация</option>
+                                    <option value="other">Другое</option>
+                                </select> -->
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">
+                                    Сообщение *
+                                </label>
+                                <!-- <textarea id="message" 
+                                          name="message"
+                                          rows="4"
+                                          required
+                                          class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition resize-none"
+                                          placeholder="Опишите ваш вопрос или цель обращения..."></textarea> -->
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" 
+                                    class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-accent transition shadow-lg hover-scale">
+                                <i class="fas fa-paper-plane mr-2"></i> Отправить сообщение
+                            </button>
+
+                            <p class="text-gray-500 text-sm text-center mt-4">
+                                Нажимая кнопку, вы соглашаетесь с 
+                                <a href="/privacy" class="text-primary hover:underline">политикой конфиденциальности</a>
+                            </p>
+                        </form>
+
+                        <!-- Quick Contact Info -->
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <h3 class="font-heading font-bold text-lg text-primary mb-4">
+                                Быстрые способы связи
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <a href="https://wa.me/+79899033485" 
+                                   target="_blank"
+                                   class="bg-green-50 text-green-700 p-4 rounded-xl hover:bg-green-100 transition flex items-center justify-center">
+                                    <i class="fab fa-whatsapp text-xl mr-3"></i>
+                                    <span>Написать в WhatsApp</span>
+                                </a>
+                                <a href="tel:+79899033485" 
+                                   class="bg-blue-50 text-blue-700 p-4 rounded-xl hover:bg-blue-100 transition flex items-center justify-center">
+                                    <i class="fas fa-phone text-xl mr-3"></i>
+                                    <span>Позвонить сейчас</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Как нас найти
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Медресе Al-Huda находится в центре Курчалоя, рядом с центральной мечетью
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Map Placeholder -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+                        <div class="h-96 map-placeholder flex flex-col items-center justify-center relative">
+                            <div class="text-center z-10">
+                                <i class="fas fa-map-marked-alt text-primary text-6xl mb-4"></i>
+                                <h3 class="font-heading font-bold text-2xl text-gray-700 mb-2">
+                                    Карта расположения
+                                </h3>
+                                <p class="text-gray-600">
+                                    г. Курчалой, ул. Кадырова 51
+                                </p>
+                            </div>
+                            <!-- Map marker -->
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center animate-pulse">
+                                    <i class="fas fa-map-pin text-white text-xl"></i>
+                                </div>
+                                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-primary"></div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap justify-between items-center">
+                                <div>
+                                    <h4 class="font-heading font-bold text-lg mb-2">Адрес для навигатора</h4>
+                                    <p class="text-gray-600">Чеченская Республика, Курчалой, ул. Кадырова 51</p>
+                                </div>
+                                <a href="https://maps.google.com/?q=Курчалой+ул.+Кадырова+51" 
+                                   target="_blank"
+                                   class="mt-4 sm:mt-0 bg-primary text-white px-6 py-3 rounded-full hover:bg-accent transition">
+                                    <i class="fas fa-external-link-alt mr-2"></i> Открыть в Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Directions -->
+                <div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg h-full">
+                        <h3 class="font-heading font-bold text-xl text-primary mb-6">
+                            <i class="fas fa-directions mr-2"></i> Как добраться
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <!-- By Car -->
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2 flex items-center">
+                                    <i class="fas fa-car text-primary mr-3"></i>
+                                    На автомобиле
+                                </h4>
+                                <p class="text-gray-600 text-sm">
+                                    От центрального рынка 500 метров. Есть парковка для 10 автомобилей.
+                                </p>
+                            </div>
+
+                            <!-- Public Transport -->
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2 flex items-center">
+                                    <i class="fas fa-bus text-primary mr-3"></i>
+                                    Общественный транспорт
+                                </h4>
+                                <p class="text-gray-600 text-sm">
+                                    Остановка "Центральный рынок". Маршруты: 1, 3, 5, 7.
+                                </p>
+                            </div>
+
+                            <!-- Landmarks -->
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2 flex items-center">
+                                    <i class="fas fa-landmark text-primary mr-3"></i>
+                                    Ориентиры
+                                </h4>
+                                <ul class="text-gray-600 text-sm space-y-1">
+                                    <li>• Рядом с центральной мечетью</li>
+                                    <li>• Напротив школы №2</li>
+                                    <li>• Рядом с продуктовым магазином "Радуга"</li>
+                                </ul>
+                            </div>
+
+                            <!-- Parking -->
+                            <div class="bg-secondary p-4 rounded-xl">
+                                <h4 class="font-bold text-gray-800 mb-2">
+                                    <i class="fas fa-parking text-primary mr-2"></i> Парковка
+                                </h4>
+                                <p class="text-gray-600 text-sm">
+                                    Бесплатная парковка во дворе медресе. Доступна для студентов и посетителей.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Частые вопросы
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Ответы на популярные вопросы о записи и обучении
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                        <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                        <span>Сколько ждать ответа на заявку?</span>
+                    </h3>
+                    <p class="text-gray-700 pl-9">
+                        Мы связываемся в течение 2 часов в рабочее время (09:00-22:00). В выходные ответ может занять до 24 часов.
+                    </p>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                        <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                        <span>Можно ли приехать без предварительной записи?</span>
+                    </h3>
+                    <p class="text-gray-700 pl-9">
+                        Да, но мы рекомендуем предварительно позвонить, чтобы уточнить расписание и доступность преподавателей.
+                    </p>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                        <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                        <span>Есть ли бесплатная консультация?</span>
+                    </h3>
+                    <p class="text-gray-700 pl-9">
+                        Да, первая консультация бесплатная. Вы можете прийти в медресе или получить консультацию по телефону.
+                    </p>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                        <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                        <span>Работаете ли вы в выходные?</span>
+                    </h3>
+                    <p class="text-gray-700 pl-9">
+                        Да, мы работаем 7 дней в неделю. В субботу до 20:00, в воскресенье до 18:00.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="/faq" class="text-primary font-medium hover:text-accent transition inline-flex items-center">
+                    <i class="fas fa-arrow-right mr-2"></i>Смотреть все вопросы
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16" style="background: linear-gradient(135deg, #755139 0%, #8B4513 100%);">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">
+                    Остались вопросы?
+                </h2>
+                <p class="text-xl mb-8 text-gray-100">
+                    Позвоните нам прямо сейчас и получите бесплатную консультацию по телефону
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="tel:+79899033485" 
+                       class="bg-white text-primary font-bold text-xl px-8 py-4 rounded-full hover:bg-secondary transition shadow-lg hover-scale">
+                        <i class="fas fa-phone-alt mr-2"></i>+7 (989) 903-34-85
+                    </a>
+                    <div class="text-center sm:text-left">
+                        <p class="text-gray-200">Работаем ежедневно</p>
+                        <p class="font-bold">09:00 – 22:00</p>
+                    </div>
+                </div>
+                
+                <p class="mt-8 text-gray-200">
+                    Или напишите нам в 
+                    <a href="https://wa.me/+79899033485" 
+                       target="_blank"
+                       class="text-white font-bold underline hover:text-secondary">
+                        WhatsApp
+                    </a>
+                    — отвечаем в течение 5 минут
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Contact form handling -->
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                course: document.getElementById('course').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Simple validation
+            if (!formData.name || !formData.phone || !formData.message) {
+                alert('Пожалуйста, заполните обязательные поля (имя, телефон, сообщение)');
+                return;
+            }
+            
+            // Phone validation (simple)
+            const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+            if (!phoneRegex.test(formData.phone)) {
+                alert('Пожалуйста, введите корректный номер телефона');
+                return;
+            }
+            
+            // Show success message
+            const originalButtonText = this.querySelector('button[type="submit"]').innerHTML;
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Отправка...';
+            submitButton.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Success message
+                alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в течение 2 часов.');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+                
+                // In real implementation, you would send the data to your server
+                // fetch('/api/contact', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json',
+                //     },
+                //     body: JSON.stringify(formData)
+                // })
+                // .then(response => response.json())
+                // .then(data => {
+                //     alert('Спасибо! Ваше сообщение отправлено.');
+                //     this.reset();
+                // })
+                // .catch(error => {
+                //     alert('Произошла ошибка. Пожалуйста, попробуйте позже или позвоните нам.');
+                // })
+                // .finally(() => {
+                //     submitButton.innerHTML = originalButtonText;
+                //     submitButton.disabled = false;
+                // });
+                
+            }, 1500);
+        });
+        
+        // Phone input formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value[0] === '7' || value[0] === '8') {
+                    value = '+7' + value.substring(1);
+                } else if (value[0] === '9') {
+                    value = '+7' + value;
+                }
+                
+                // Format: +7 (XXX) XXX-XX-XX
+                if (value.length > 2) {
+                    value = value.substring(0, 2) + ' (' + value.substring(2);
+                }
+                if (value.length > 7) {
+                    value = value.substring(0, 7) + ') ' + value.substring(7);
+                }
+                if (value.length > 12) {
+                    value = value.substring(0, 12) + '-' + value.substring(12);
+                }
+                if (value.length > 15) {
+                    value = value.substring(0, 15) + '-' + value.substring(15);
+                }
+            }
+            this.value = value.substring(0, 18); // Limit length
+        });
+    </script>
+</body>
+</html>

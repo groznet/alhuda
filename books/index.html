@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книги - Al-Huda Медресе | Учебные пособия по Корану</title>
+    <meta name="description" content="Учебные пособия медресе Al-Huda. Купить книгу 'Мифтахьун-нуроний' для изучения Корана с нуля.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .books-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.95) 0%, rgba(139, 69, 19, 0.85) 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        .book-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .preview-overlay {
+            background: linear-gradient(to bottom, rgba(117, 81, 57, 0.9), rgba(139, 69, 19, 0.8));
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Page Header -->
+    <section class="relative py-20 books-gradient">
+        <div class="absolute inset-0">
+            <img src="/assets/images/breadcrumb.jpg" 
+                 alt="Исламские книги" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6">
+                    Наши книги
+                </h1>
+                <p class="text-xl mb-8 text-gray-100">
+                    Авторские учебные пособия для эффективного изучения Корана и арабского языка
+                </p>
+                
+                <!-- Breadcrumb -->
+                <div class="flex justify-center items-center space-x-2 text-sm">
+                    <a href="/" class="hover:text-secondary">Главная</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-secondary">Книги</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Book -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Главное пособие
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Учебник, разработанный преподавателями медресе Al-Huda специально для начинающих
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Book Cover & Details -->
+                <div class="flex flex-col items-center">
+                    <!-- Book Cover -->
+                    <div class="relative w-64 h-80 md:w-80 md:h-96 book-shadow rounded-lg overflow-hidden mb-8">
+                        <div class="absolute inset-0 bg-cover bg-center" 
+                            style="background-image: url('/assets/books/book-1.jpg');">
+                            <!-- Dark overlay -->
+                            <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+                            <div class="relative flex flex-col items-center justify-center p-8 text-center text-white">
+                                <i class="fas fa-book-open text-6xl mb-6"></i>
+                                <h3 class="font-heading font-bold text-3xl mb-2">Мифтахьун-нуроний</h3>
+                                <p class="text-lg">Учебное пособие</p>
+                                <p class="text-sm opacity-80 mt-2">для начинающих изучать Коран</p>
+                            </div>
+
+                            <div class="absolute bottom-4 right-4 bg-secondary w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
+                                <span class="text-primary font-bold text-lg">990 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Quick Info -->
+                    <div class="grid grid-cols-2 gap-4 w-full max-w-md">
+                        <div class="bg-secondary p-4 rounded-xl text-center">
+                            <i class="fas fa-book text-primary text-xl mb-2"></i>
+                            <p class="text-sm font-medium">128 страниц</p>
+                        </div>
+                        <div class="bg-secondary p-4 rounded-xl text-center">
+                            <i class="fas fa-language text-primary text-xl mb-2"></i>
+                            <p class="text-sm font-medium">Русский язык</p>
+                        </div>
+                        <div class="bg-secondary p-4 rounded-xl text-center">
+                            <i class="fas fa-print text-primary text-xl mb-2"></i>
+                            <p class="text-sm font-medium">Цветная печать</p>
+                        </div>
+                        <div class="bg-secondary p-4 rounded-xl text-center">
+                            <i class="fas fa-shipping-fast text-primary text-xl mb-2"></i>
+                            <p class="text-sm font-medium">Доставка по РФ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book Description -->
+                <div>
+                    <div class="mb-6">
+                        <h3 class="font-heading font-bold text-2xl text-primary mb-3">Описание книги</h3>
+                        <p class="text-gray-700">
+                            «Мифтахьун-нуроний» — это учебное пособие для начинающих изучать Коран, разработанное преподавателями медресе Al-Huda. 
+                            Книга представляет собой систематизированный курс, который поможет вам освоить арабский алфавит, правила чтения 
+                            и основы таджвида в кратчайшие сроки.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="font-heading font-bold text-xl text-accent mb-3">Для кого эта книга?</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Для начинающих изучать Коран с нуля</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Для родителей, которые хотят обучать детей</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Для преподавателей воскресных школ и медресе</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Для самостоятельного изучения основ чтения Корана</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/+79899033485" 
+                           target="_blank"
+                           class="bg-green-600 text-white font-bold px-6 py-4 rounded-full text-center hover:bg-green-700 transition shadow-lg hover-scale flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-xl mr-3"></i>
+                            <div>
+                                <div class="font-bold">Купить через WhatsApp</div>
+                                <div class="text-sm opacity-90">+7 (989) 903-34-85</div>
+                            </div>
+                        </a>
+                        <a href="/assets/books/Al-Huda-Book.pdf" 
+                           target="_blank"
+                           class="border-2 border-primary text-primary font-bold px-6 py-4 rounded-full text-center hover:bg-secondary transition hover-scale flex items-center justify-center">
+                            <i class="fas fa-eye text-xl mr-3"></i>
+                            <div>
+                                <div class="font-bold">Предварительный просмотр</div>
+                                <div class="text-sm">PDF, 15 страниц</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Contents -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Содержание книги
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Структурированная программа обучения от простого к сложному
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Module 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-4">Арабский алфавит</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-primary text-xs mt-1 mr-2"></i>
+                            <span>Изучение всех 28 букв арабского алфавита</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-primary text-xs mt-1 mr-2"></i>
+                            <span>Формы букв в начале, середине и конце слов</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-primary text-xs mt-1 mr-2"></i>
+                            <span>Правила соединения букв</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-primary text-xs mt-1 mr-2"></i>
+                            <span>Упражнения на написание</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Module 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-4">Основы чтения</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-accent text-xs mt-1 mr-2"></i>
+                            <span>Огласовки (харакат)</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-accent text-xs mt-1 mr-2"></i>
+                            <span>Сукун и шадда</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-accent text-xs mt-1 mr-2"></i>
+                            <span>Долгие и краткие гласные</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-accent text-xs mt-1 mr-2"></i>
+                            <span>Чтение простых слов и фраз</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Module 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-4">Таджвид для начинающих</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-primary text-xs mt-1 mr-2"></i>
+                            <span>Введение в науку таджвида</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-primary text-xs mt-1 mr-2"></i>
+                            <span>Махрадж букв (места articulation)</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-primary text-xs mt-1 mr-2"></i>
+                            <span>Правила чтения "нуна" и "мима"</span>
+                        </li>
+                        <li class="flex items-start text-sm">
+                            <i class="fas fa-circle text-primary text-xs mt-1 mr-2"></i>
+                            <span>Чтение коротких сур</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Preview Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Предварительный просмотр
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Ознакомьтесь с содержанием книги перед покупкой
+                </p>
+            </div>
+            
+            <!-- Preview Gallery -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Preview Placeholder -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden mb-8">
+                    <div class="h-64 preview-overlay flex flex-col items-center justify-center">
+                        <i class="fas fa-book-open text-white text-6xl mb-6"></i>
+                        <h3 class="font-heading font-bold text-3xl text-white mb-2">Мифтахьун-нуроний</h3>
+                        <p class="text-gray-200">Учебное пособие для начинающих</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-heading font-bold text-xl">Содержание PDF-превью</h4>
+                            <span class="text-sm text-gray-500">15 страниц</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Введение и оглавление</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Первые уроки алфавита</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Примеры упражнений</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Методические рекомендации</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Download Buttons -->
+                <div class="text-center">
+                    <a href="/assets/books/al-huda.pdf" 
+                       target="_blank"
+                       class="inline-block bg-primary text-white font-bold px-8 py-4 rounded-full hover:bg-accent transition shadow-lg hover-scale mb-4">
+                        <i class="fas fa-download mr-2"></i>Скачать PDF превью (5.2 MB)
+                    </a>
+                    <p class="text-gray-500 text-sm">
+                        После загрузки PDF-файла вы сможете ознакомиться с содержанием книги
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Как купить книгу?
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Простая процедура заказа с доставкой по всей России
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 relative">
+                        <span class="text-white font-bold text-xl">1</span>
+                        <div class="absolute -right-8 top-1/2 transform -translate-y-1/2 w-8 h-1 bg-gray-300 hidden md:block"></div>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-3">Свяжитесь с нами</h3>
+                    <p class="text-gray-700 text-sm">
+                        Напишите в WhatsApp или позвоните по номеру +7 (989) 903-34-85
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 relative">
+                        <span class="text-white font-bold text-xl">2</span>
+                        <div class="absolute -right-8 top-1/2 transform -translate-y-1/2 w-8 h-1 bg-gray-300 hidden md:block"></div>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-3">Оформите заказ</h3>
+                    <p class="text-gray-700 text-sm">
+                        Укажите количество книг и адрес доставки
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 relative">
+                        <span class="text-white font-bold text-xl">3</span>
+                        <div class="absolute -right-8 top-1/2 transform -translate-y-1/2 w-8 h-1 bg-gray-300 hidden md:block"></div>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-3">Оплатите</h3>
+                    <p class="text-gray-700 text-sm">
+                        Оплата при получении или онлайн переводом
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-3">Получите книгу</h3>
+                    <p class="text-gray-700 text-sm">
+                        Доставка почтой России или курьером (1-14 дней)
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Payment Methods -->
+            <div class="mt-16 max-w-3xl mx-auto">
+                <h3 class="font-heading font-bold text-2xl text-center text-primary mb-8">
+                    Способы оплаты
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow text-center">
+                        <i class="fas fa-wallet text-primary text-3xl mb-3"></i>
+                        <p class="font-medium">Наличные</p>
+                        <p class="text-sm text-gray-600">При получении</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow text-center">
+                        <i class="fab fa-cc-visa text-primary text-3xl mb-3"></i>
+                        <p class="font-medium">Банковская карта</p>
+                        <p class="text-sm text-gray-600">Онлайн перевод</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow text-center">
+                        <i class="fab fa-sberbank text-primary text-3xl mb-3"></i>
+                        <p class="font-medium">Сбербанк Онлайн</p>
+                        <p class="text-sm text-gray-600">Быстрый перевод</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow text-center">
+                        <i class="fab fa-cc-paypal text-primary text-3xl mb-3"></i>
+                        <p class="font-medium">Электронные деньги</p>
+                        <p class="text-sm text-gray-600">Qiwi, ЮMoney</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials for Book -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Отзывы о книге
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Что говорят те, кто уже изучает Коран по нашему пособию
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-secondary p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold">Ахмед</h4>
+                            <p class="text-sm text-gray-600">Начинающий ученик</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Купил книгу для самостоятельного изучения. Очень понравилась структура - от простого к сложному. 
+                        Уже через месяц смог читать простые суры. Рекомендую всем начинающим!"
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-secondary p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold">Айша</h4>
+                            <p class="text-sm text-gray-600">Мама двоих детей</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Занимаюсь с детьми 7 и 9 лет по этой книге. Иллюстрации яркие, объяснения понятные даже детям. 
+                        Дети с удовольствием занимаются, уже выучили алфавит."
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-secondary p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold">Расул</h4>
+                            <p class="text-sm text-gray-600">Преподаватель медресе</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Использую книгу как основной учебник в своей группе начинающих. Методика отлично структурирована, 
+                        упражнения эффективные. Ученики быстро прогрессируют."
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                        Частые вопросы о книге
+                    </h2>
+                    <p class="text-gray-600">
+                        Ответы на популярные вопросы о покупке и использовании учебника
+                    </p>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow">
+                        <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                            <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                            <span>Можно ли купить электронную версию книги?</span>
+                        </h3>
+                        <p class="text-gray-700 pl-9">
+                            В настоящее время доступна только бумажная версия книги. Мы планируем выпустить электронную версию в будущем.
+                        </p>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow">
+                        <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                            <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                            <span>Как быстро происходит доставка?</span>
+                        </h3>
+                        <p class="text-gray-700 pl-9">
+                            Доставка по России занимает от 3 до 14 дней в зависимости от региона. В Чеченской Республике доставка 1-3 дня.
+                        </p>
+                    </div>
+                    
+                    <!-- FAQ 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow">
+                        <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                            <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                            <span>Подходит ли книга для детей?</span>
+                        </h3>
+                        <p class="text-gray-700 pl-9">
+                            Да, книга подходит для детей от 7 лет. Для более младшего возраста (5-6 лет) рекомендуется заниматься с преподавателем.
+                        </p>
+                    </div>
+                    
+                    <!-- FAQ 4 -->
+                    <div class="bg-white p-6 rounded-2xl shadow">
+                        <h3 class="font-heading font-bold text-lg mb-3 flex items-start">
+                            <i class="fas fa-question-circle text-primary mr-3 mt-1"></i>
+                            <span>Можно ли вернуть книгу?</span>
+                        </h3>
+                        <p class="text-gray-700 pl-9">
+                            Да, в течение 14 дней после получения при условии сохранения товарного вида книги.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="/faq" class="text-primary font-medium hover:text-accent transition">
+                        <i class="fas fa-arrow-right mr-2"></i>Смотреть все вопросы
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16" style="background: linear-gradient(135deg, #755139 0%, #8B4513 100%);">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">
+                    Начните изучение Корана сегодня!
+                </h2>
+                <p class="text-xl mb-8 text-gray-100">
+                    Закажите учебное пособие «Мифтахьун-нуроний» и получите бесплатную консультацию по его использованию
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/+79899033485" 
+                       target="_blank"
+                       class="bg-white text-primary font-bold px-8 py-4 rounded-full hover:bg-secondary transition shadow-lg hover-scale">
+                        <i class="fab fa-whatsapp mr-2"></i>Заказать через WhatsApp
+                    </a>
+                    <a href="tel:+79899033485" 
+                       class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white/20 transition hover-scale">
+                        <i class="fas fa-phone mr-2"></i>Позвонить для заказа
+                    </a>
+                </div>
+                
+                <p class="mt-8 text-gray-200 text-sm">
+                    📞 Консультация по телефону: ежедневно с 09:00 до 22:00
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

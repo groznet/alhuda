@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Huda - Медресе | Школа Корана в Курчалое</title>
+    <meta name="description" content="Офлайн и онлайн школа изучения Корана с таджвидом. Авторская методика обучения для детей и взрослых в Курчалое.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#755139',
+                        secondary: '#F2EDD7',
+                        accent: '#8B4513',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(117, 81, 57, 0.9) 0%, rgba(139, 69, 19, 0.8) 100%);
+        }
+        .text-shadow {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        .prayer-time {
+            background: linear-gradient(135deg, #755139 0%, #8B4513 100%);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header: Loaded dynamically using JavaScript -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md"></header>
+
+    <!-- Hero Section: Loaded dynamically using JavaScript -->
+    <section id="hero" class="relative min-h-[70vh] flex items-center"></section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Почему выбирают <span class="text-accent">Al-Huda</span> Медресе?
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Уникальная методика обучения, разработанная специально для эффективного изучения Корана
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-secondary p-6 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Авторская методика</h3>
+                    <p class="text-gray-700">
+                        Специально разработанный подход к обучению чтению Корана, основанный на глубоком понимании потребностей каждого студента.
+                    </p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-secondary p-6 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Интерактивное обучение</h3>
+                    <p class="text-gray-700">
+                        Активное вовлечение студентов в учебный процесс через современные интерактивные методы и технологии.
+                    </p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-secondary p-6 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-tie text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Индивидуальный подход</h3>
+                    <p class="text-gray-700">
+                        Персонализированная программа обучения для каждого ученика с учетом его способностей и целей.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Preview Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-4">
+                    Наши курсы
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Программы обучения для всех возрастов и уровней подготовки
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="h-48 bg-primary relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-book-quran text-white text-6xl"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-bold">
+                            Очно • Онлайн
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl mb-2">Коран с таджвидом</h3>
+                        <p class="text-gray-600 mb-4">
+                            Обучение правильному чтению Корана с соблюдением всех правил таджвида.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold">от 2 500 ₽/мес</span>
+                            <a href="/courses/quran-reading" class="text-accent font-medium hover:text-primary">
+                                Подробнее →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="h-48 bg-accent relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-language text-white text-6xl"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white text-accent px-3 py-1 rounded-full text-sm font-bold">
+                            Все уровни
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl mb-2">Арабский язык</h3>
+                        <p class="text-gray-600 mb-4">
+                            Изучение арабского алфавита, грамматики и разговорной речи для начинающих.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold">от 3 000 ₽/мес</span>
+                            <a href="/courses/arabic-language" class="text-accent font-medium hover:text-primary">
+                                Подробнее →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale">
+                    <div class="h-48 bg-primary relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-child text-white text-6xl"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-bold">
+                            5-15 лет
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl mb-2">Детские группы</h3>
+                        <p class="text-gray-600 mb-4">
+                            Специальная программа обучения Корану для детей с игровыми элементами.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold">от 2 000 ₽/мес</span>
+                            <a href="/courses/kids-program" class="text-accent font-medium hover:text-primary">
+                                Подробнее →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="/courses" class="inline-block bg-primary text-white font-bold px-8 py-3 rounded-full hover:bg-accent transition shadow-lg">
+                    <i class="fas fa-list mr-2"></i>Все курсы и программы
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Book Content -->
+                <div>
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary mb-6">
+                        Учебное пособие «Мифтахьун-нуроний»
+                    </h2>
+                    <p class="text-gray-700 mb-6">
+                        Авторское учебное пособие для начинающих изучать Коран. Разработано преподавателями медресе Al-Huda специально для эффективного освоения основ чтения Корана.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Поэтапное обучение от алфавита к чтению</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Практические упражнения и задания</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Иллюстрации и пояснения на русском языке</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Подходит для самостоятельного изучения</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/+79899033485" 
+                           target="_blank"
+                           class="bg-green-600 text-white font-bold px-6 py-3 rounded-full text-center hover:bg-green-700 transition shadow-lg">
+                            <i class="fab fa-whatsapp mr-2"></i>Купить через WhatsApp
+                        </a>
+                        <a href="/assets/books/al-huda.pdf" 
+                           target="_blank"
+                           class="border-2 border-primary text-primary font-bold px-6 py-3 rounded-full text-center hover:bg-secondary transition">
+                            <i class="fas fa-eye mr-2"></i>Предварительный просмотр
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Book Image -->
+                <div class="flex justify-center">
+                    <div class="relative w-64 h-80 md:w-80 md:h-96 shadow-2xl rounded-lg overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                            <div class="text-center text-white p-6">
+                                <i class="fas fa-book-open text-6xl mb-4"></i>
+                                <h3 class="font-heading font-bold text-2xl">Мифтахьун-нуроний</h3>
+                                <p class="mt-2">Учебное пособие</p>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-20 h-20 bg-secondary rounded-full flex items-center justify-center shadow-lg">
+                            <span class="text-primary font-bold text-lg">990 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="py-16 prayer-time">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">
+                    Готовы начать изучение Корана?
+                </h2>
+                <p class="text-xl mb-8 text-gray-100">
+                    Запишитесь на бесплатный пробный урок и получите консультацию преподавателя
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
+                        <i class="fas fa-clock text-3xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Рабочее время</h3>
+                        <p class="text-gray-100">09:00 – 22:00</p>
+                        <p class="text-sm text-gray-200">Ежедневно</p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
+                        <i class="fas fa-map-marker-alt text-3xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Адрес</h3>
+                        <p class="text-gray-100">г. Курчалой, ЧР</p>
+                        <p class="text-sm text-gray-200">ул. Кадырова 51, 366319</p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
+                        <i class="fas fa-phone text-3xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Телефон</h3>
+                        <p class="text-gray-100">+7 (989) 903-34-85</p>
+                        <p class="text-sm text-gray-200">WhatsApp / Telegram</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+79899033485" class="bg-white text-primary font-bold px-8 py-3 rounded-full hover:bg-secondary transition shadow-lg">
+                        <i class="fas fa-phone mr-2"></i>Позвонить сейчас
+                    </a>
+                    <a href="/enroll" class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white/20 transition">
+                        <i class="fas fa-edit mr-2"></i>Онлайн-заявка
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Loaded dynamically using JavaScript -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+79899033485" 
+       target="_blank"
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl z-40 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- All menu toggle scripts handled in main.js -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
