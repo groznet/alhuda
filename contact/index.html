@@ -231,12 +231,12 @@
                                 <label for="name" class="block text-gray-700 font-medium mb-2">
                                     Ваше имя *
                                 </label>
-                                <!-- <input type="text" 
-                                       id="name" 
-                                       name="name"
-                                       required
-                                       class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition"
-                                       placeholder="Иван Иванов"> -->
+                                <input disabled type="text" 
+                                    id="name" 
+                                    name="name"
+                                    required
+                                    class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition disabled:bg-gray-100 disabled:cursor-not-allowed"
+                                    placeholder="Иван Иванов">
                             </div>
 
                             <!-- Phone -->
@@ -244,12 +244,12 @@
                                 <label for="phone" class="block text-gray-700 font-medium mb-2">
                                     Телефон *
                                 </label>
-                                <!-- <input type="tel" 
-                                       id="phone" 
-                                       name="phone"
-                                       required
-                                       class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition"
-                                       placeholder="+7 (999) 123-45-67"> -->
+                                <input disabled type="tel" 
+                                    id="phone" 
+                                    name="phone"
+                                    required
+                                    class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition disabled:bg-gray-100 disabled:cursor-not-allowed"
+                                    placeholder="+7 (999) 123-45-67">
                             </div>
 
                             <!-- Email -->
@@ -257,11 +257,11 @@
                                 <label for="email" class="block text-gray-700 font-medium mb-2">
                                     Email
                                 </label>
-                                <!-- <input type="email" 
-                                       id="email" 
-                                       name="email"
-                                       class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition"
-                                       placeholder="example@mail.ru"> -->
+                                <input disabled type="email" 
+                                    id="email" 
+                                    name="email"
+                                    class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition disabled:bg-gray-100 disabled:cursor-not-allowed"
+                                    placeholder="example@mail.ru">
                             </div>
 
                             <!-- Course Selection -->
@@ -269,16 +269,16 @@
                                 <label for="course" class="block text-gray-700 font-medium mb-2">
                                     Интересующий курс
                                 </label>
-                                <!-- <select id="course" 
+                                <select disabled id="course" 
                                         name="course"
-                                        class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition bg-white">
+                                        class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition bg-white disabled:bg-gray-100 disabled:cursor-not-allowed">
                                     <option value="">Выберите курс</option>
                                     <option value="quran">Коран с таджвидом</option>
                                     <option value="arabic">Арабский язык</option>
                                     <option value="kids">Детские группы</option>
                                     <option value="consult">Консультация</option>
                                     <option value="other">Другое</option>
-                                </select> -->
+                                </select>
                             </div>
 
                             <!-- Message -->
@@ -286,17 +286,17 @@
                                 <label for="message" class="block text-gray-700 font-medium mb-2">
                                     Сообщение *
                                 </label>
-                                <!-- <textarea id="message" 
-                                          name="message"
-                                          rows="4"
-                                          required
-                                          class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition resize-none"
-                                          placeholder="Опишите ваш вопрос или цель обращения..."></textarea> -->
+                                <textarea disabled id="message" 
+                                        name="message"
+                                        rows="4"
+                                        required
+                                        class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none input-focus transition resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                                        placeholder="Опишите ваш вопрос или цель обращения..."></textarea>
                             </div>
 
                             <!-- Submit Button -->
-                            <button type="submit" 
-                                    class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-accent transition shadow-lg hover-scale">
+                            <button disabled type="submit" 
+                                    class="w-full bg-gray-400 text-white font-bold py-4 rounded-xl cursor-not-allowed transition shadow-md">
                                 <i class="fas fa-paper-plane mr-2"></i> Отправить сообщение
                             </button>
 
@@ -304,6 +304,14 @@
                                 Нажимая кнопку, вы соглашаетесь с 
                                 <a href="/privacy" class="text-primary hover:underline">политикой конфиденциальности</a>
                             </p>
+
+                            <!-- Уведомление об отключении формы -->
+                            <div class="p-4 bg-amber-50 border-l-4 border-amber-500 text-amber-900 rounded-r-xl text-sm flex items-start space-x-3">
+                                <i class="fas fa-info-circle text-amber-500 text-lg mt-0.5 flex-shrink-0"></i>
+                                <p>
+                                    <strong>Обратите внимание:</strong> В настоящее время форма отключена, не обрабатывает и не собирает персональные данные в связи с требованиями Федерального закона «О персональных данных» № 152-ФЗ.
+                                </p>
+                            </div>
                         </form>
 
                         <!-- Quick Contact Info -->
